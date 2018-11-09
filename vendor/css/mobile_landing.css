@@ -32,14 +32,14 @@
     #block4 ul {position:static; font-size:18px;}
         #block4 ul li {padding:0; margin:15px auto; width:320px;}
          #block4 ul li:before {content:' '; display:inline-block; vertical-align:middle; width:0; height:64px;}
-            #block4 ul li img {height:35px; margin:14px 5px;}
-             #b4_ul1 li:nth-of-type(odd) img {float:left;}
-             #b4_ul1 li:nth-of-type(odd) span {text-align:left;}
-             #b4_ul1 li:nth-of-type(even) img {float:right;}
-             #b4_ul1 li:nth-of-type(even) span {text-align:right;}
-             #b4_ul2 li:nth-of-type(even) img {float:left;}
-             #b4_ul2 li:nth-of-type(even) span {text-align:left;}
-             #b4_ul2 li:nth-of-type(odd) img {float:right;}
+            #block4 ul li object {height:35px; margin:14px 5px;}
+             #b4_ul1 li:nth-of-type(odd) object {float:left;}
+             #b4_ul1 li:nth-of-type(odd) span {text-align:left;float:left;}
+             #b4_ul1 li:nth-of-type(even) object {float:right;}
+             #b4_ul1 li:nth-of-type(even) span {text-align:right;float:right;}
+             #b4_ul2 li:nth-of-type(even) object {float:left;}
+             #b4_ul2 li:nth-of-type(even) span {text-align:left;float:left;}
+             #b4_ul2 li:nth-of-type(odd) object {float:right;float:right;}
              #b4_ul2 li:nth-of-type(odd) span {text-align:right;}
             #block4 ul li span {width:236px; margin:0 5px; line-height:24px;}
 

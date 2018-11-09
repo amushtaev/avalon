@@ -1,63 +1,68 @@
-$(document).ready(function() {
-    
-    hide_cards();
-    
-    $("#menu a, .scroll").click(function () {
-        scroll_to( $(this).attr("href"), $(this).attr("top") );
+jQuery(document).ready(function() {
+    jQuery("#menu a, .scroll").click(function () {
+        scroll_to( jQuery(this).attr("href"), jQuery(this).attr("top") );
         return false;
     });
-    $("#mobile_clubs_link a").click(function () {
-        $("#mobile_clubs_link").css("display", "none");
+    jQuery("#menu li, .scroll").click(function () {
+        scroll_to( jQuery(this).attr("href"), jQuery(this).attr("top") );
+        return false;
     });
-    
-    $('#photos img').click(function () {
+    jQuery("#mobile_clubs_link a").click(function () {
+        jQuery("#mobile_clubs_link").css("display", "none");
+    });
+
+    jQuery('#photos img').click(function () {
         gal_showpict(this.parentNode);
     });
 
-    fill_command( );
-    
-    var l = $('#pcommand .command li').length;
-    var r = [];
-    var v = 0;
-    var cnt = 3;
-    var cnt = l<cnt ? l : cnt ;
-    for ( var i=1 ; i<=cnt ; i++ ) {
-        do { var v = Math.floor(Math.random()*l); } while ( r.indexOf(v) != -1 )
-        r.push(v);
-        $('#command').append( $('#pcommand .command li').eq(v).clone().css('top',0) );
-    }
-    
-    var l = $('#smallreviews .review').length;
-    var r = 0;
-    var v = 0;
-    for ( var i=1 ; i<=2 ; i++ ) {
-        while ( r == v ) { var r = Math.floor(Math.random()*l); }
-        v = r;
-        $('#reviews').append( $('#smallreviews .review').eq(v).clone() );
+    var l = jQuery('#pcommand .command li').length;
+    if(l.length > 0) {
+        var r = [];
+        var v = 0;
+        var cnt = 3;
+        var cnt = l<cnt ? l : cnt ;
+        for ( var i=1 ; i<=cnt ; i++ ) {
+            do { var v = Math.floor(Math.random()*l); } while ( r.indexOf(v) != -1 )
+            r.push(v);
+            jQuery('#command').append( $('#pcommand .command li').eq(v).clone().css('top',0) );
+        }
     }
 
-    var free_fixed = $('#free_fixed');
+    var l = jQuery('#smallreviews .review').length;
+    if(l.length > 0) {
+        var r = 0;
+        var v = 0;
+        for (var i = 1; i <= 2; i++) {
+            while (r == v) {
+                var r = Math.floor(Math.random() * l);
+            }
+            v = r;
+            jQuery('#reviews').append($('#smallreviews .review').eq(v).clone());
+        }
+    }
+
+    var free_fixed = jQuery('#free_fixed');
     if ( localStorage.getItem('free_fixed') == 'clicked' ) {
         free_fixed.remove();
     } else if( isMobile() ) {
         free_fixed.fadeTo( 200, 1 );
     }
 
-    $(window).resize(function() {
-        if ( !$('#mobile_header').is(':visible') ) {
-            $('#content').bind('scroll',function() {
-                if( $(this).scrollTop() > $('#block1').height() ) {
-                    $('#premenuwidth').addClass('stickytop').css('right',$('#content').width()-$('#block2').width()+'px');
+    jQuery(window).resize(function() {
+        if ( !jQuery('#mobile_header').is(':visible') ) {
+            jQuery('#content').bind('scroll',function() {
+                if( jQuery(this).scrollTop() > jQuery('#block1').height() ) {
+                    jQuery('#premenuwidth').addClass('stickytop').css('right',jQuery('#content').width()-jQuery('#block2').width()+'px');
                 }
                 else{
-                    $('#premenuwidth').removeClass('stickytop');
+                    jQuery('#premenuwidth').removeClass('stickytop');
                 }
             }).scroll();
         } else {
-            $('#content').unbind('scroll');
+            jQuery('#content').unbind('scroll');
         }
         if ( !isMobile() ) {
-            var scroll_width = window.innerWidth - $('#getwidth').width();
+            var scroll_width = window.innerWidth - jQuery('#getwidth').width();
             free_fixed.css({
                 'right': scroll_width + 'px',
                 'margin-top': ~~( free_fixed.height() / -2 ) + 'px'
@@ -65,68 +70,63 @@ $(document).ready(function() {
         }
     }).resize();
 
-    $('#free_fixed .ff_bg').hover(
+    jQuery('#free_fixed .ff_bg').hover(
         function() { free_fixed.addClass('hover'); free_fixed.addClass('prehov'); },
         function() { free_fixed.removeClass('prehov'); setTimeout(function(){ if ( !free_fixed.hasClass('prehov') ) { free_fixed.removeClass('hover'); } }, 20); }
     ).click(function() {
         if ( !free_fixed.hasClass('hover') ) { return; }
-        scroll_to( '#block5', $('#getwidth').is(':visible') ? 250 : 0 );
+        scroll_to( '#block5', jQuery('#getwidth').is(':visible') ? 250 : 0 );
         localStorage.setItem( 'free_fixed', 'clicked' );
         free_fixed.fadeTo( 300, 0, function(){ free_fixed.hide(); } );
     });
 
     var phone = '';
-    $( '#free_phone input' ).mask( '00 000-00-00', {
+    jQuery( '#free_phone input' ).mask( '00 000-00-00', {
         placeholder: '__ ___-__-__',
         clearIfNotMatch: true,
         onChange: function( text, e, currentField, options ) {
             if ( text[0] == '0' ) {
-                $( currentField ).val( phone );
+                jQuery( currentField ).val( phone );
             } else {
-                phone = $( currentField ).val( );
+                phone = jQuery( currentField ).val( );
             }
         }
     });
 
-    /*$('#video div').click(function () {
-        $(this).html('<iframe width="533" height="300" src="#" frameborder="0" allowfullscreen></iframe>');
-    });*/
-
     return;
-
 });
 
 function scroll_to( href, top ) {
-    var destination = $(href).offset().top + $("#content").scrollTop() - ( top || 100 );
-    var speed = Math.abs( $("#content").scrollTop() - destination ) / 4;
+    var destination = jQuery(href).offset().top + jQuery("#content").scrollTop() - ( top || 100 );
+    var speed = Math.abs( jQuery("#content").scrollTop() - destination ) / 4;
     if ( speed < 400 ) { speed = 400; }
     if ( speed > 1000 ) { speed = 1000; }
-    $("#content:not(:animated)").animate( { scrollTop: destination }, speed );
+    jQuery("#content:not(:animated)").animate( { scrollTop: destination }, speed );
 }
 
 function show_cards() {
-    $('#cards').empty();
-    $.each(cards[$('#card_clubs').data('value')],function(i){
+    jQuery('#cards').empty();
+    jQuery.each(cards[jQuery('#card_clubs').data('value')],function(i){
         if ( i=='name' || i=='single' ) { return true; }
         var s = '';
-        $.each(this.service,function() {
+        jQuery.each(this.service,function() {
             s += '<li>'+this+'</li>';
         });
         var r = (this.remark?'<div class="card_remark">'+this.remark+'</div>':'');
-        var m = Math.round( this.cost[$('#card_period').data('value')][0] / $('#card_period').data('value') / 10 ) * 10;
+        var m = Math.round( this.cost[jQuery('#card_period').data('value')][0] / jQuery('#card_period').data('value') / 10 ) * 10;
         var c = $(
             '<div class="card">'+
-                '<div class="card_name">'+this.name+'</div>'+
-                '<ul class="card_service">'+s+'</ul>'+
-                '<div class="card_cost">'+this.cost[$('#card_period').data('value')][0]+'</div>'+
-                '<div class="card_month">'+m+'</div>'+
-                r+
+            '<div class="card_name">'+this.name+'</div>'+
+            '<ul class="card_service">'+s+'</ul>'+
+            '<div class="card_cost">'+this.cost[jQuery('#card_period').data('value')][0]+'</div>'+
+            '<div class="card_month">'+m+'</div>'+
+            r+
             '</div>'
         );
         c.addClass('card_bottom');
-        $('#cards').append(c);
+        jQuery('#cards').append(c);
     });
-    $('#cards').children('div').each(function(i){
+    jQuery('#cards').children('div').each(function(i){
         var d = $(this);
         setTimeout(function() {
             d.removeClass('card_bottom');
@@ -135,13 +135,13 @@ function show_cards() {
 }
 
 function hide_cards() {
-    var l = $('#cards').children('div').length;
+    var l = jQuery('#cards').children('div').length;
     if ( l == 0 ) {
         //show_cards();
         return;
     }
-    $('#cards').children('div').each(function(i){
-        var d = $(this);
+    jQuery('#cards').children('div').each(function(i){
+        var d = jQuery(this);
         setTimeout(function() {
             d.addClass('card_top');
         },i*100);
@@ -154,29 +154,29 @@ function hide_cards() {
 }
 
 function send_freetraining(b) {
-    if ( $(b).hasClass('wait') ) { return; }
-    if ( !$('#free_club').hasClass('empty') ) {
-        $('#free_club').removeClass('error');
+    if ( jQuery(b).hasClass('wait') ) { return; }
+    if ( !jQuery('#free_club').hasClass('empty') ) {
+        jQuery('#free_club').removeClass('error');
     } else {
-        $('#free_club').addClass('error');
+        jQuery('#free_club').addClass('error');
     }
     var tel = $('#free_phone input').cleanVal();
     if ( tel.length && tel[0]=='0' ) { tel = tel.substring(1) }
     if ( /^\d{9}$/.test(tel) ) {
-        $('#free_phone').removeClass('error');
+        jQuery('#free_phone').removeClass('error');
     } else {
-        $('#free_phone').addClass('error').find('input').focus();
+        jQuery('#free_phone').addClass('error').find('input').focus();
     }
-    if ( $('#free_club').hasClass('error') || $('#free_phone').hasClass('error') ) { return; }
-    $('#free_fixed').fadeTo( 300, 0, function(){ $('#free_fixed').hide(); } );
+    if ( jQuery('#free_club').hasClass('error') || jQuery('#free_phone').hasClass('error') ) { return; }
+    jQuery('#free_fixed').fadeTo( 300, 0, function(){ jQuery('#free_fixed').hide(); } );
     localStorage.setItem( 'free_fixed', 'clicked' );
-    $(b).addClass('wait');
-    $.ajax({
+    jQuery(b).addClass('wait');
+    jQuery.ajax({
         url : 'ajax.php',
         type : 'POST',
         data : {
             module : 'code',
-            club : $('#free_club').data('value'),
+            club : jQuery('#free_club').data('value'),
             phone : tel
         },
         success : function (data, textStatus) {
@@ -190,7 +190,7 @@ function send_freetraining(b) {
             }
         },
         complete : function (XMLHttpRequest, textStatus) {
-            $(b).removeClass('wait');
+            jQuery(b).removeClass('wait');
         }
     });
 }
@@ -198,7 +198,7 @@ function send_freetraining(b) {
 function fill_command( ) {
     for ( i in command ) {
         var post = command[ i ].post.constructor === Array ? command[ i ].post.join( '<br>' ) : command[ i ].post ;
-        $( '#pcommand .command' ).append(
+        jQuery( '#pcommand .command' ).append(
             '<li style="top:' + (i % 3 * 30) + 'px"><div style="background-image:url(\'img/command/' + command[ i ].photo + '.jpg\');"></div><b>' + command[ i ].name + '</b><span>' + post + '</span><p>' + command[ i ].desc.join( '</p><p>' ) + '</p></li>'
         )
     }

@@ -22,7 +22,7 @@
                              -webkit-transform: translateZ(0);top: 26px;}
         #premenu {width:1000px; position:relative; margin:0 auto; text-align:right; overflow:hidden; top: -16px;}
             #menu {display:inline-block; margin-right:20px; padding:0; transform:skewX(20deg); -webkit-transform:skewX(20deg);border-radius: 10px;}
-                #menu a {display:inline-block; padding:4px 15px; border-top:6px solid #fff; border-bottom:6px solid #fff; cursor:pointer;
+                #menu a {display:inline-block; padding:4px 15px; border-top:6px solid #fff; border-bottom:6px solid #fff; cursor:pointer; float: left;
                          background-color:#fff; margin-left:-1px; transition:0.2s;border-radius: 10px;}
                  #menu a:hover { color:#930085;}
                  #menu a:nth-of-type(2) {padding-left:25px;}
@@ -35,7 +35,7 @@
 
 #mobile_banner {display:none;}
 
-#block3 {height:500px; background:url('../img/decor1.png') no-repeat center top;}
+#block3 {height:500px; background:url('/wp-content/themes/avalon/img/decor1.svg') no-repeat center top;background-size: 50%;}
     #b3_text1 {display:block; position:absolute; left:30px; top:195px; width:360px;}
     #video {display:block; position:absolute; width:533px; height:300px; left:425px; top:170px; background:#000; cursor:pointer; overflow:hidden;
             transform:skewX(15deg); -webkit-transform:skewX(0deg) translateZ(0); box-shadow:0 0 70px #868686; border-radius: 32px;}
@@ -54,7 +54,7 @@
     #block4 ul {font-size:20px; line-height:30px;}
         #block4 ul li {margin:20px 0;}
         #block4 ul li>* {display:inline-block; vertical-align:middle;}
-        #block4 ul img {height:55px; margin:10px 20px;}
+        #block4 ul object {height:55px; margin:10px 20px;}
     #b4_ul1 {position:absolute; top:40px; left:20px; text-align:left;}
         #b4_li1 {padding-left:100px;}
         #b4_li2 {padding-left:50px;}
@@ -74,8 +74,7 @@
         #free_form .skew_input input {width:210px;}
         #free_form .skew_button {margin-left:40px; margin-top:10px;}
     #b5_text1 {position:absolute; top:270px; right:0; width:550px; font-size:18px; line-height:23px; color:#293950;}
-        #b5_text1 span:first-child {display:block;}
-        #b5_text1 span:last-child {display:block; margin-left:10px;}
+        #b5_text1 span {display:block;font-size: 14px;}
 
 
 #block6 {min-height:200px; padding-top:40px; margin-bottom:-40px;}
@@ -196,15 +195,15 @@
     }
     @keyframes border {
         0% { box-shadow:0 0 0 2px rgba(255, 76, 79, 0); }
-        100% { box-shadow:0 0 0 2px rgb(255, 76, 79); }
+        100% { box-shadow:0 0 0 2px rgb(209,30,169); }
     }
-    #ff_center span { display:inline-block; font-size:20px; font-family:'Roboto Condensed', sans-serif;
+    #ff_center span { display:inline-block; font-size:20px; font-family:Arial, Helvetica, sans-serif;
                       text-align:center; vertical-align:bottom; margin:0 3px; }
      #ff_center span:last-child { margin-bottom:-22px; }
 
 
 #previews {width:1000px; height:700px; padding-top:20px !important;}
- #previews:before {content:'НАШИ КЛИЕНТЫ О НАС'; position:absolute; top:20px; right:20px; font-size:24px; font-family:'Roboto Condensed', sans-serif;}
+ #previews:before {content:'НАШИ КЛИЕНТЫ О НАС'; position:absolute; top:20px; right:20px; font-size:24px; font-family:Arial, Helvetica, sans-serif;}
     #previews .review:nth-child(even) {top:40px;}
     #bigreviews {margin-top:80px;}
         .bigreview {margin:20px 50px;}
@@ -215,7 +214,7 @@
 
 
 #pcommand {width:1000px; height:700px;}
- #pcommand:before {content:'КОМАНДА НАШЕЙ СЕТИ'; position:absolute; top:20px; right:20px; font-size:24px; font-family:'Roboto Condensed', sans-serif;}
+ #pcommand:before {content:'КОМАНДА НАШЕЙ СЕТИ'; position:absolute; top:20px; right:20px; font-size:24px; font-family:Arial, Helvetica, sans-serif;}
     #pcommand .command li {margin:20px 50px;}
 
 
@@ -223,7 +222,7 @@
 
 
 #pselectclub {text-align:center; white-space:nowrap !important;}
- #pselectclub:before {content:'Тренажерный зал Авалон'; position:absolute; top:20px; right:20px; font-size:24px; font-family:'Roboto Condensed', sans-serif;}
+ #pselectclub:before {content:'Тренажерный зал Авалон'; position:absolute; top:20px; right:20px; font-size:24px; font-family:Arial, Helvetica, sans-serif;}
     #pselectclub a {display:inline-block; margin:5px; padding:15px; border:1px solid #D4D4D4; background-color:#F1F1F1; border-radius:10px; transition:0.2s;
                     background-repeat:no-repeat; background-size:0;}
      #pselectclub a:hover {border-color:#80E0FF; background-color:#E9F8FF;}
@@ -240,3 +239,21 @@
 #pfree p {display:inline-block; font-size:18px; line-height:28px; width:340px; text-align:left;}
 #pfree div {clear:both; margin-top:40px; height:40px;}
     #pfree div button {margin:0 auto !important;}
+
+
+#menu li {
+    display: inline-block;
+    padding: 4px 15px;
+    border-top: 0;
+    border-bottom: 0;
+    cursor: pointer;
+    background-color: #fff;
+    margin-left: -1px;
+    transition: 0.2s;
+    border-radius: 10px;
+}
+#menu li a {
+    display: inline-block;
+    transform: skewX(-20deg);
+    -webkit-transform: skewX(-20deg);
+}
