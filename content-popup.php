@@ -10,52 +10,11 @@ global $post;
 <div id="popups">
     <div id="previews">
         <div id="smallreviews">
-            <div class="review">
-                <div class="rev_img">
-                    <img src="./img/placeholder.jpg">
-                </div>
-                <b>Name</b>
-                <div class="rev_text">
-                    <span><br></span>
-                    <span><br></span>
-                    <span>Description</span>
-                </div>
-                <div class="rev_smalltext">
-                    <span> Description small text.</span>
-                </div>
-            </div>
-            <div class="review">
-                <div class="rev_img">
-                    <img src="./img/placeholder.jpg">
-                </div>
-                <b>Name</b>
-                <div class="rev_text">
-                    <span><br></span>
-                    <span><br></span>
-                    <span>Description</span>
-                </div>
-                <div class="rev_smalltext">
-                    <span> Description small text.</span>
-                </div>
-            </div>
-            <div class="review">
-                <div class="rev_img">
-                    <img src="./img/placeholder.jpg">
-                </div>
-                <b>Name</b>
-                <div class="rev_text">
-                    <span><br></span>
-                    <span><br></span>
-                    <span>Description</span>
-                </div>
-                <div class="rev_smalltext">
-                    <span> Description small text.</span>
-                </div>
-            </div>
+            <?php get_template_part( 'content', 'reviews' ); ?>
         </div>
         <div id="bigreviews">
             <div class="bigreview">
-                <img src="./img/placeholder.jpg">
+                <img src="/wp-content/themes/avalon/img/placeholder.jpg">
                 <span>
                         <p>bigreview description.</p>
                     </span>
@@ -64,7 +23,9 @@ global $post;
     </div>
     <!--Insert hear from Command JS-->
     <div id="pcommand">
-        <ul class="command"></ul>
+        <ul class="command">
+            <?php get_template_part( 'content', 'team' ); ?>
+        </ul>
     </div>
 
 

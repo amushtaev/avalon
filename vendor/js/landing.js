@@ -14,22 +14,28 @@ jQuery(document).ready(function() {
     jQuery('#photos img').click(function () {
         gal_showpict(this.parentNode);
     });
-
-    fill_command();
-
-    var l = jQuery('#pcommand .command li').length;
-    if(l > 0) {
-        console.log(l, "LL if")
-        var r = [];
-        var v = 0;
-        var cnt = 3;
-        var cnt = l<cnt ? l : cnt ;
-        for ( var i=1 ; i<=cnt ; i++ ) {
-            do { var v = Math.floor(Math.random()*l); } while ( r.indexOf(v) != -1 )
-            r.push(v);
-            jQuery('#command').append( jQuery('#pcommand .command li').eq(v).clone().css('top',0) );
+    var intervalID = setInterval(function(){
+        if(document.querySelectorAll("#pcommand li").length > 0) {
+            clearInterval(intervalID);
+            var l = jQuery('#pcommand .command li').length;
+            if (l > 0) {
+                var r = [];
+                var v = 0;
+                var cnt = 3;
+                var cnt = l < cnt ? l : cnt;
+                for (var i = 1; i <= cnt; i++) {
+                    do {
+                        var v = Math.floor(Math.random() * l);
+                    } while (r.indexOf(v) != -1)
+                    r.push(v);
+                    jQuery('#command').append(jQuery('#pcommand .command li').eq(v).clone().css('top', 0));
+                }
+            }
         }
-    }
+    }, 1000);
+    setTimeout(function() {
+        clearTimeout(intervalID);
+    }, 10000);
 
     var l = jQuery('#smallreviews .review').length;
     if(l > 0) {
@@ -195,14 +201,4 @@ function send_freetraining(b) {
             jQuery(b).removeClass('wait');
         }
     });
-}
-
-function fill_command() {
-    console.log("command", command)
-    for ( i in command ) {
-        var post = command[ i ].post.constructor === Array ? command[ i ].post.join( '<br>' ) : command[ i ].post ;
-        jQuery( '#pcommand .command' ).append(
-            '<li style="top:' + (i % 3 * 30) + 'px"><div style="background-image:url(\'img/command/' + command[ i ].photo + '\');"></div><b>' + command[ i ].name + '</b><span style="display: none;">' + post + '</span><p>' + command[ i ].desc.join( '</p><p>' ) + '</p></li>'
-        )
-    }
 }

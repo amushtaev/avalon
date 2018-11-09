@@ -130,7 +130,7 @@ endif;
                 <br><br>
                 <button class="skew_button" onclick="send_freetraining(this)">
                     <span>ОСТАВИТЬ ЗАЯВКУ</span>
-                    <img src="/wp-content/themes/avalon//img/loader.gif">
+                    <img src="/wp-content/themes/avalon/img/loader.gif">
                 </button>
             </div>
             <div id="b5_text1">
@@ -152,15 +152,15 @@ endif;
         <div class="cont_block">
             <h2>ГАЛЛЕРЕЯ</h2>
             <div id="photos">
-                <span><img src="./img/min_1.jpg"></span>
-                <span><img src="./img/min_2.jpg"></span>
-                <span><img src="./img/min_3.jpg"></span>
-                <span><img src="./img/min_4.jpg"></span>
-                <span><img src="./img/min_5.jpg"></span>
-                <span><img src="./img/min_6.jpg"></span>
-                <span><img src="./img/min_7.jpg"></span>
-                <span><img src="./img/min_8.jpg"></span>
-                <span><img src="./img/min_9.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_1.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_2.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_3.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_4.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_5.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_6.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_7.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_8.jpg"></span>
+                <span><img src="/wp-content/themes/avalon/img/min_9.jpg"></span>
             </div>
             <div id="b7_text1">
                 <a href="#"></a>
@@ -169,36 +169,7 @@ endif;
     </section>
     <section class="cont_block" id="block8">
         <h2>НАШИ КЛИЕНТЫ О НАС</h2>
-        <div id="reviews">
-            <div class="review">
-                <div class="rev_img">
-                    <img src="./img/placeholder.jpg">
-                </div>
-                <b>Name</b>
-                <div class="rev_text">
-                    <span><br></span>
-                    <span><br></span>
-                    <span>Description</span>
-                </div>
-                <div class="rev_smalltext">
-                    <span> Description small text.</span>
-                </div>
-            </div>
-            <div class="review">
-                <div class="rev_img">
-                    <img src="./img/placeholder.jpg">
-                </div>
-                <b>Name</b>
-                <div class="rev_text">
-                    <span><br></span>
-                    <span><br></span>
-                    <span>Description</span>
-                </div>
-                <div class="rev_smalltext">
-                    <span> Description small text.</span>
-                </div>
-            </div>
-        </div>
+        <div id="reviews"></div>
         <div id="b8_text1">
             <button class="center_button" onclick="show_popup(&#39;reviews&#39;)"><span>Ещё отзывы &gt;</span></button>
         </div>
@@ -283,7 +254,6 @@ endif;
 
 <?php
 get_template_part( 'content', 'popup' );
-get_template_part( 'content', 'team' );
 ?>
 
 
