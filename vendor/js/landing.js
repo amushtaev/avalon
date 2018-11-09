@@ -15,8 +15,11 @@ jQuery(document).ready(function() {
         gal_showpict(this.parentNode);
     });
 
+    fill_command();
+
     var l = jQuery('#pcommand .command li').length;
-    if(l.length > 0) {
+    if(l > 0) {
+        console.log(l, "LL if")
         var r = [];
         var v = 0;
         var cnt = 3;
@@ -24,12 +27,12 @@ jQuery(document).ready(function() {
         for ( var i=1 ; i<=cnt ; i++ ) {
             do { var v = Math.floor(Math.random()*l); } while ( r.indexOf(v) != -1 )
             r.push(v);
-            jQuery('#command').append( $('#pcommand .command li').eq(v).clone().css('top',0) );
+            jQuery('#command').append( jQuery('#pcommand .command li').eq(v).clone().css('top',0) );
         }
     }
 
     var l = jQuery('#smallreviews .review').length;
-    if(l.length > 0) {
+    if(l > 0) {
         var r = 0;
         var v = 0;
         for (var i = 1; i <= 2; i++) {
@@ -37,7 +40,7 @@ jQuery(document).ready(function() {
                 var r = Math.floor(Math.random() * l);
             }
             v = r;
-            jQuery('#reviews').append($('#smallreviews .review').eq(v).clone());
+            jQuery('#reviews').append(jQuery('#smallreviews .review').eq(v).clone());
         }
     }
 
@@ -92,7 +95,6 @@ jQuery(document).ready(function() {
             }
         }
     });
-
     return;
 });
 
@@ -127,7 +129,7 @@ function show_cards() {
         jQuery('#cards').append(c);
     });
     jQuery('#cards').children('div').each(function(i){
-        var d = $(this);
+        var d = jQuery(this);
         setTimeout(function() {
             d.removeClass('card_bottom');
         },i*100);
@@ -160,7 +162,7 @@ function send_freetraining(b) {
     } else {
         jQuery('#free_club').addClass('error');
     }
-    var tel = $('#free_phone input').cleanVal();
+    var tel = jQuery('#free_phone input').cleanVal();
     if ( tel.length && tel[0]=='0' ) { tel = tel.substring(1) }
     if ( /^\d{9}$/.test(tel) ) {
         jQuery('#free_phone').removeClass('error');
@@ -195,11 +197,12 @@ function send_freetraining(b) {
     });
 }
 
-function fill_command( ) {
+function fill_command() {
+    console.log("command", command)
     for ( i in command ) {
         var post = command[ i ].post.constructor === Array ? command[ i ].post.join( '<br>' ) : command[ i ].post ;
         jQuery( '#pcommand .command' ).append(
-            '<li style="top:' + (i % 3 * 30) + 'px"><div style="background-image:url(\'img/command/' + command[ i ].photo + '.jpg\');"></div><b>' + command[ i ].name + '</b><span>' + post + '</span><p>' + command[ i ].desc.join( '</p><p>' ) + '</p></li>'
+            '<li style="top:' + (i % 3 * 30) + 'px"><div style="background-image:url(\'img/command/' + command[ i ].photo + '\');"></div><b>' + command[ i ].name + '</b><span style="display: none;">' + post + '</span><p>' + command[ i ].desc.join( '</p><p>' ) + '</p></li>'
         )
     }
 }

@@ -28,7 +28,7 @@
         #video iframe {position:absolute; top:0; left:0; width:100%; height:100%;}
     #b3_text2 {display:none;}
 
-#block4 {height:auto; background:url('../img/decor1.png') no-repeat center -95px; margin:0; padding:40px 0;}
+#block4 {height:auto; background:url('/wp-content/themes/avalon/img/decor1.svg') no-repeat center -95px; margin:0; padding:40px 0;}
     #block4 ul {position:static; font-size:18px;}
         #block4 ul li {padding:0; margin:15px auto; width:320px;}
          #block4 ul li:before {content:' '; display:inline-block; vertical-align:middle; width:0; height:64px;}
@@ -38,7 +38,7 @@
              #b4_ul1 li:nth-of-type(even) object {float:right;}
              #b4_ul1 li:nth-of-type(even) span {text-align:right;float:right;}
              #b4_ul2 li:nth-of-type(even) object {float:left;}
-             #b4_ul2 li:nth-of-type(even) span {text-align:left;float:left;}
+             #b4_ul2 li:nth-of-type(even) span {text-align:left;}
              #b4_ul2 li:nth-of-type(odd) object {float:right;float:right;}
              #b4_ul2 li:nth-of-type(odd) span {text-align:right;}
             #block4 ul li span {width:236px; margin:0 5px; line-height:24px;}

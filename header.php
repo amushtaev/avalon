@@ -12,13 +12,13 @@
 echo "header is loads";
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
+
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Спортивный клуб "Авалон"</title>
     <meta name="keywords" content="фитнес, тренажёры, харьков, чемпион, спорт">
     <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="icon" href="templates/img/favicon.ico" type="image/x-icon">
     <link rel="shortcut icon" href="templates/img/favicon.ico" type="image/x-icon">
     <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
@@ -30,6 +30,7 @@ echo "header is loads";
 
     <?php wp_head(); ?>
 </head>
+
 <body>
     <div id="free_fixed" style="right: 17px; margin-top: -110px; display: block;">
         <div id="ff_top"><div class="ff_bg"></div></div>
@@ -41,21 +42,3 @@ echo "header is loads";
         </div>
         <div id="ff_bottom"><div class="ff_bg"></div></div>
     </div>
-
-    <div id="content">
-        <div id="getwidth"></div>
-
-        <?php if ( has_nav_menu( 'top' ) ) : ?>
-        <div id="premenuwidth" class="stickytop" style="right: 17px;">
-            <div id="premenu">
-                <?php get_template_part( 'navigation/navigation', 'top' ); ?>
-            </div><!-- .wrap -->
-        </div><!-- .navigation-top -->
-        <?php endif; ?>
-
-        <section class="cont_block" id="block1">
-            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
-            <div id="clubs_link">
-                <a href="#"><span></span></a>
-            </div>
-        </section>

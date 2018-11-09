@@ -94,7 +94,7 @@
         #b6_text1 button {margin:0 auto;}
 
 #block7 {background-color:#000; margin-top:180px;}
-    #block7 .cont_block {height:425px; background: url(../img/1_1.png) no-repeat right bottom;}
+    #block7 .cont_block {height:425px; background: url(/wp-content/themes/avalon/img/1_1.svg) no-repeat right bottom;}
         #block7 h2 {position:relative; top:-50px;}
         #b7_img1 {position:absolute; top:-94px; right:20px;}
         #photos {position:absolute; top:40px; left:20px; width:540px; font-size:0; line-height:0;}

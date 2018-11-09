@@ -199,7 +199,7 @@ function wpse_load_js() {
 
     wp_enqueue_script('jquery', $plugin_url . '/vendor/js/jquery.js',true);
     wp_enqueue_script('jquerymask', $plugin_url . '/vendor/js/jquery.mask.js',array(), '',true);
-    wp_enqueue_script('comand', $plugin_url . '/vendor/js/comand.js',array(), '',true);
+    //wp_enqueue_script('comand', $plugin_url . '/vendor/js/comand.js',array(), '',true);
     wp_enqueue_script('main', $plugin_url . '/vendor/js/main.js',array(), '',true);
     wp_enqueue_script('banner', $plugin_url . '/vendor/js/banner.js',array(), '',true);
     wp_enqueue_script('gallery', $plugin_url . '/vendor/js/gallery.js',array(), '',true);
