@@ -16,10 +16,11 @@ $size = 'thumbnail';
 foreach ( $news as $post ) : setup_postdata( $post ); ?>
     <li style="top: <?php echo $i % 3 * 30; ?>px">
         <h2><?php echo get_the_title() ?></h2>
-        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), $size ); ?>">
+        <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), $size ); ?>"/>
         <span><?php the_content(); ?></span>
     </li>
 <?php
     $i++;
+    echo $i;
 endforeach;
 wp_reset_postdata(); ?>

@@ -14,10 +14,9 @@ get_header();
     <?php endif; ?>
 
     <section class="cont_block" id="block1">
-        <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
-        <div id="clubs_link">
-            <a href="#"><span></span></a>
-        </div>
+        <a href="/">
+            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
+        </a>
     </section>
     <section class="width_block" id="block2">
         <div class="cont_block">
@@ -35,12 +34,12 @@ get_header();
             </style>
         </div>
     </section>
+    <?php if (have_posts()) the_post(); ?>
     <article class="cont_block" id="post-<?php the_ID(); ?>">
         <div>
             <div>
                 <h1 style="text-align: center; font-size: 32px; margin-top: 30px;"><?php echo get_the_title() ?></h1>
-                <span><?php the_content(); ?></span>
-                <br/>
+                <span style="padding: 40px;display: block;line-height: 20px;"><?php the_content(); ?></span>
             </div>
         </div>
     </article>
