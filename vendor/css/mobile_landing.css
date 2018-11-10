@@ -124,7 +124,7 @@
              background-color:#fff; white-space:normal; transition:none; overflow:auto;}
 .popups_center {top:0 !important;}
 .popups_top {top:0 !important;}
-#popups_close {display:block; position:absolute; left:0; right:0; bottom:0; height:50px; color:#fff; text-align:center; font-family:'Roboto Condensed', sans-serif; font-size:20px;}
+#popups_close {display:block; position:absolute; left:0; right:0; bottom:0; height:50px; color:#fff; text-align:center; font-family:Arial, Helvetica, sans-serif; font-size:20px;}
  #popups_close:before {content:' '; display:inline-block; width:0; height:100%; vertical-align:middle;}
 
 

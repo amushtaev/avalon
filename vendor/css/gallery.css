@@ -17,9 +17,9 @@
 
 #gallery {background-color:rgba(0,0,0,0.5);}
 #gal_preimg {background-color:rgba(0,0,0,0.5);}
-#gal_preimg {background-image:url('../img/gallery_load.gif');}
-#gal_previmg.gal_repeat {background-image:url('../img/gallery_prev.png');}
-#gal_nextimg.gal_repeat {background-image:url('../img/gallery_next.png');}
+#gal_preimg {background-image:url('/wp-content/themes/avalon/img/gallery_load.gif');}
+#gal_previmg.gal_repeat {background-image:url('/wp-content/themes/avalon/img/gallery_prev.png');}
+#gal_nextimg.gal_repeat {background-image:url('/wp-content/themes/avalon/img/gallery_next.png');}
 
 
 
