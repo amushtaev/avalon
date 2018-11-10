@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6f96d73-18d6-48f2-b7d0-e1b22db97183" name="Default" comment="">
+<<<<<<< HEAD
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/1 (3).svg" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/img/1 (4).svg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -17,6 +18,44 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/css/landing.css" afterPath="$PROJECT_DIR$/vendor/css/landing.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/css/main.css" afterPath="$PROJECT_DIR$/vendor/css/main.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/js/gallery.js" afterPath="$PROJECT_DIR$/vendor/js/gallery.js" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content-popup.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/content-team.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/navigation/navigation-mobile.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/1 (3).jpg" afterPath="$PROJECT_DIR$/img/1 (3).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/1 (4).jpg" afterPath="$PROJECT_DIR$/img/1 (4).jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/1.jpg" afterPath="$PROJECT_DIR$/img/1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/2.jpg" afterPath="$PROJECT_DIR$/img/2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/3.jpg" afterPath="$PROJECT_DIR$/img/3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/4.jpg" afterPath="$PROJECT_DIR$/img/4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/5.jpg" afterPath="$PROJECT_DIR$/img/5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/6.jpg" afterPath="$PROJECT_DIR$/img/6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/7.jpg" afterPath="$PROJECT_DIR$/img/7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/8.jpg" afterPath="$PROJECT_DIR$/img/8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/9.jpg" afterPath="$PROJECT_DIR$/img/9.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/instagram.png" afterPath="$PROJECT_DIR$/img/instagram.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/mail.png" afterPath="$PROJECT_DIR$/img/mail.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/menu_btn.png" afterPath="$PROJECT_DIR$/img/menu_btn.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_1.jpg" afterPath="$PROJECT_DIR$/img/min_1.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_2.jpg" afterPath="$PROJECT_DIR$/img/min_2.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_3.jpg" afterPath="$PROJECT_DIR$/img/min_3.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_4.jpg" afterPath="$PROJECT_DIR$/img/min_4.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_5.jpg" afterPath="$PROJECT_DIR$/img/min_5.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_6.jpg" afterPath="$PROJECT_DIR$/img/min_6.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_7.jpg" afterPath="$PROJECT_DIR$/img/min_7.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_8.jpg" afterPath="$PROJECT_DIR$/img/min_8.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/min_9.jpg" afterPath="$PROJECT_DIR$/img/min_9.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/placeholder.jpg" afterPath="$PROJECT_DIR$/img/placeholder.jpg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/vk.png" afterPath="$PROJECT_DIR$/img/vk.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/footer.php" afterPath="$PROJECT_DIR$/footer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/header.php" afterPath="$PROJECT_DIR$/header.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/css/landing.css" afterPath="$PROJECT_DIR$/vendor/css/landing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/css/mobile_landing.css" afterPath="$PROJECT_DIR$/vendor/css/mobile_landing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/css/mobile_main.css" afterPath="$PROJECT_DIR$/vendor/css/mobile_main.css" />
+>>>>>>> parent of 92cd146... add reviews
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/js/landing.js" afterPath="$PROJECT_DIR$/vendor/js/landing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/js/mails.js" afterPath="$PROJECT_DIR$/vendor/js/mails.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/js/main.js" afterPath="$PROJECT_DIR$/vendor/js/main.js" />
@@ -30,16 +69,40 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+<<<<<<< HEAD
       <file leaf-file-name="content-news.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content-news.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="238">
               <caret line="18" column="83" lean-forward="false" selection-start-line="18" selection-start-column="83" selection-end-line="18" selection-end-column="83" />
               <folding />
+=======
+      <file leaf-file-name="functions.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/functions.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="553">
+              <caret line="192" column="32" lean-forward="true" selection-start-line="192" selection-start-column="32" selection-end-line="192" selection-end-column="32" />
+              <folding>
+                <element signature="e#6#177#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="content-about-us.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/content-about-us.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+              <folding>
+                <element signature="e#6#87#0#PHP" expanded="true" />
+              </folding>
+>>>>>>> parent of 92cd146... add reviews
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -58,6 +121,14 @@
                 <element signature="e#10529#10547#0#HTML" expanded="true" />
                 <element signature="e#11050#11072#0#HTML" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="content-team.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/content-team.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+              <folding />
+>>>>>>> parent of 92cd146... add reviews
             </state>
           </provider>
         </entry>
@@ -65,13 +136,31 @@
       <file leaf-file-name="content-popup.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content-popup.php">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="357">
               <caret line="25" column="72" lean-forward="false" selection-start-line="25" selection-start-column="72" selection-end-line="25" selection-end-column="72" />
+=======
+            <state relative-caret-position="85">
+              <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="15" />
+              <folding>
+                <element signature="n#style#0;n#iframe#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="544">
+              <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+>>>>>>> parent of 92cd146... add reviews
               <folding />
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="content-card.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/content-card.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -85,20 +174,41 @@
                 <element signature="n#style#0;n#object#0;n#span#0;n#div#1;n#div#2;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#!!top" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="comand.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/js/comand.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-144">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="5" />
+              <folding />
+>>>>>>> parent of 92cd146... add reviews
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/footer.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding />
+=======
+      <file leaf-file-name="landing.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/vendor/js/landing.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="598">
+              <caret line="200" column="34" lean-forward="false" selection-start-line="200" selection-start-column="34" selection-end-line="200" selection-end-column="34" />
+              <folding>
+                <marker date="1541776739461" expanded="true" signature="7528:7554" ph="..." />
+                <marker date="1541776739461" expanded="true" signature="7568:7633" ph="..." />
+              </folding>
+>>>>>>> parent of 92cd146... add reviews
             </state>
           </provider>
         </entry>
       </file>
+<<<<<<< HEAD
       <file leaf-file-name="header.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/header.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -107,6 +217,33 @@
               <folding>
                 <element signature="e#6#210#0#PHP" expanded="true" />
               </folding>
+=======
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="285" column="39" lean-forward="false" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
+              <folding>
+                <element signature="e#6#150#0#PHP" expanded="true" />
+                <element signature="e#8183#8187#0#HTML" expanded="true" />
+                <element signature="e#8684#8720#0#HTML" expanded="true" />
+                <element signature="e#8770#8793#0#HTML" expanded="true" />
+                <element signature="e#9542#9578#0#HTML" expanded="true" />
+                <element signature="e#9737#9760#0#HTML" expanded="true" />
+                <element signature="e#9958#9976#0#HTML" expanded="true" />
+                <element signature="e#10576#10598#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="footer.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/footer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+              <folding />
+>>>>>>> parent of 92cd146... add reviews
             </state>
           </provider>
         </entry>
@@ -130,6 +267,7 @@
       <find>command</find>
       <find>$</find>
       <find>ОСТАВИТЬ</find>
+<<<<<<< HEAD
       <find>show_popup</find>
       <find>free_club</find>
       <find>success</find>
@@ -137,6 +275,8 @@
       <find>font-family:'Roboto Condensed', sans-serif;</find>
       <find>select_arrow.png</find>
       <find>select_arrow</find>
+=======
+>>>>>>> parent of 92cd146... add reviews
     </findStrings>
     <replaceStrings>
       <replace>jQuery</replace>
@@ -173,7 +313,15 @@
         <option value="$PROJECT_DIR$/content-card.php" />
         <option value="$PROJECT_DIR$/footer.php" />
         <option value="$PROJECT_DIR$/header.php" />
+<<<<<<< HEAD
         <option value="$PROJECT_DIR$/index.php" />
+=======
+        <option value="$PROJECT_DIR$/content-popup.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/functions.php" />
+        <option value="$PROJECT_DIR$/vendor/js/landing.js" />
+        <option value="$PROJECT_DIR$/content-team.php" />
+>>>>>>> parent of 92cd146... add reviews
       </list>
     </option>
   </component>
@@ -192,10 +340,17 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds" extendedState="6">
+<<<<<<< HEAD
     <option name="x" value="-8" />
     <option name="y" value="-8" />
     <option name="width" value="1936" />
     <option name="height" value="1066" />
+=======
+    <option name="x" value="1931" />
+    <option name="y" value="160" />
+    <option name="width" value="1346" />
+    <option name="height" value="698" />
+>>>>>>> parent of 92cd146... add reviews
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -212,6 +367,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+<<<<<<< HEAD
+=======
+      <pane id="Scope" />
+>>>>>>> parent of 92cd146... add reviews
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -246,7 +405,10 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
+<<<<<<< HEAD
       <pane id="Scope" />
+=======
+>>>>>>> parent of 92cd146... add reviews
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,13 +457,18 @@
       <workItem from="1541611319256" duration="9866000" />
       <workItem from="1541659306290" duration="14223000" />
       <workItem from="1541698043226" duration="11835000" />
+<<<<<<< HEAD
       <workItem from="1541746642862" duration="17310000" />
       <workItem from="1541785126286" duration="32555000" />
       <workItem from="1541874882178" duration="6766000" />
+=======
+      <workItem from="1541746642862" duration="15725000" />
+>>>>>>> parent of 92cd146... add reviews
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="98181000" />
   </component>
   <component name="ToolWindowManager">
@@ -309,6 +476,15 @@
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09488273" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+=======
+    <option name="totallyTimeSpent" value="57275000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1066" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09381663" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+>>>>>>> parent of 92cd146... add reviews
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -357,11 +533,50 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="83" lean-forward="false" selection-start-line="22" selection-start-column="83" selection-end-line="22" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/navigation/navigation-top.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="21" lean-forward="false" selection-start-line="5" selection-start-column="21" selection-end-line="5" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#117#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/css/landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4318">
+          <caret line="254" column="1" lean-forward="false" selection-start-line="254" selection-start-column="1" selection-end-line="254" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of 92cd146... add reviews
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#6#294#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -371,6 +586,7 @@
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
             <element signature="e#6#150#0#PHP" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#379#435#0#HTML" expanded="true" />
             <element signature="e#1001#1021#0#HTML" expanded="true" />
             <element signature="e#6534#6613#0#HTML" expanded="true" />
@@ -381,10 +597,33 @@
             <element signature="e#10229#10252#0#HTML" expanded="true" />
             <element signature="e#10529#10547#0#HTML" expanded="true" />
             <element signature="e#11050#11072#0#HTML" expanded="true" />
+=======
+            <element signature="e#8183#8187#0#HTML" expanded="true" />
+            <element signature="e#8684#8720#0#HTML" expanded="true" />
+            <element signature="e#8770#8793#0#HTML" expanded="true" />
+            <element signature="e#9542#9578#0#HTML" expanded="true" />
+            <element signature="e#9737#9760#0#HTML" expanded="true" />
+            <element signature="e#9958#9976#0#HTML" expanded="true" />
+            <element signature="e#10576#10598#0#HTML" expanded="true" />
+>>>>>>> parent of 92cd146... add reviews
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/vendor/js/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="0" lean-forward="false" selection-start-line="9" selection-start-column="54" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <marker date="1541776739461" expanded="true" signature="7528:7554" ph="..." />
+            <marker date="1541776739461" expanded="true" signature="7568:7633" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+>>>>>>> parent of 92cd146... add reviews
     <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2431">
@@ -397,8 +636,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1377">
           <caret line="81" column="29" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
@@ -421,11 +665,29 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/footer.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
           <folding />
+=======
+    <entry file="file://$PROJECT_DIR$/vendor/css/landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="e#6#294#0#PHP" expanded="false" />
+          </folding>
+>>>>>>> parent of 92cd146... add reviews
         </state>
       </provider>
     </entry>
@@ -435,6 +697,7 @@
           <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding>
             <element signature="e#6#150#0#PHP" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#379#435#0#HTML" expanded="true" />
             <element signature="e#1001#1021#0#HTML" expanded="true" />
             <element signature="e#6534#6613#0#HTML" expanded="true" />
@@ -445,6 +708,15 @@
             <element signature="e#10229#10252#0#HTML" expanded="true" />
             <element signature="e#10529#10547#0#HTML" expanded="true" />
             <element signature="e#11050#11072#0#HTML" expanded="true" />
+=======
+            <element signature="e#8183#8187#0#HTML" expanded="true" />
+            <element signature="e#8684#8720#0#HTML" expanded="true" />
+            <element signature="e#8770#8793#0#HTML" expanded="true" />
+            <element signature="e#9542#9578#0#HTML" expanded="true" />
+            <element signature="e#9737#9760#0#HTML" expanded="true" />
+            <element signature="e#9958#9976#0#HTML" expanded="true" />
+            <element signature="e#10576#10598#0#HTML" expanded="true" />
+>>>>>>> parent of 92cd146... add reviews
           </folding>
         </state>
       </provider>
@@ -497,7 +769,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
-          <folding />
+          <folding>
+            <element signature="e#6#294#0#PHP" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -507,6 +781,7 @@
           <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
           <folding>
             <element signature="e#6#150#0#PHP" expanded="true" />
+<<<<<<< HEAD
             <element signature="e#379#435#0#HTML" expanded="true" />
             <element signature="e#1001#1021#0#HTML" expanded="true" />
             <element signature="e#6534#6613#0#HTML" expanded="true" />
@@ -517,6 +792,15 @@
             <element signature="e#10229#10252#0#HTML" expanded="true" />
             <element signature="e#10529#10547#0#HTML" expanded="true" />
             <element signature="e#11050#11072#0#HTML" expanded="true" />
+=======
+            <element signature="e#8183#8187#0#HTML" expanded="true" />
+            <element signature="e#8684#8720#0#HTML" expanded="true" />
+            <element signature="e#8770#8793#0#HTML" expanded="true" />
+            <element signature="e#9542#9578#0#HTML" expanded="true" />
+            <element signature="e#9737#9760#0#HTML" expanded="true" />
+            <element signature="e#9958#9976#0#HTML" expanded="true" />
+            <element signature="e#10576#10598#0#HTML" expanded="true" />
+>>>>>>> parent of 92cd146... add reviews
           </folding>
         </state>
       </provider>
@@ -550,8 +834,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/navigation/navigation-mobile.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="493">
           <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+=======
+        <state relative-caret-position="1377">
+          <caret line="81" column="29" lean-forward="false" selection-start-line="81" selection-start-column="29" selection-end-line="81" selection-end-column="29" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
@@ -580,24 +869,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/content-reviews.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="204">
           <caret line="16" column="8" lean-forward="true" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
           <folding />
+=======
+        <state relative-caret-position="136">
+          <caret line="8" column="69" lean-forward="false" selection-start-line="8" selection-start-column="69" selection-end-line="8" selection-end-column="69" />
+          <folding>
+            <element signature="e#6#294#0#PHP" expanded="false" />
+          </folding>
+>>>>>>> parent of 92cd146... add reviews
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mail.php">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="34">
           <caret line="2" column="78" lean-forward="false" selection-start-line="2" selection-start-column="78" selection-end-line="2" selection-end-column="78" />
           <folding />
+=======
+        <state relative-caret-position="119">
+          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#6#150#0#PHP" expanded="true" />
+            <element signature="e#8183#8187#0#HTML" expanded="true" />
+            <element signature="e#8684#8720#0#HTML" expanded="true" />
+            <element signature="e#8770#8793#0#HTML" expanded="true" />
+            <element signature="e#9542#9578#0#HTML" expanded="true" />
+            <element signature="e#9737#9760#0#HTML" expanded="true" />
+            <element signature="e#9958#9976#0#HTML" expanded="true" />
+            <element signature="e#10576#10598#0#HTML" expanded="true" />
+          </folding>
+>>>>>>> parent of 92cd146... add reviews
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/js/comand.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="42">
           <caret line="4" column="32" lean-forward="true" selection-start-line="4" selection-start-column="32" selection-end-line="4" selection-end-column="32" />
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
@@ -618,7 +935,19 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/vendor/js/jquery.js">
+=======
+    <entry file="file://$PROJECT_DIR$/vendor/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2380">
+          <caret line="143" column="10" lean-forward="false" selection-start-line="143" selection-start-column="10" selection-end-line="143" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/js/gallery.js">
+>>>>>>> parent of 92cd146... add reviews
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-26">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -630,26 +959,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/js/jquery.mask.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-26">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="51">
+          <caret line="6" column="66" lean-forward="false" selection-start-line="6" selection-start-column="66" selection-end-line="6" selection-end-column="66" />
+          <folding />
+>>>>>>> parent of 92cd146... add reviews
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/js/mails.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+        <state relative-caret-position="255">
+          <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/js/landing.js">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="822">
           <caret line="180" column="49" lean-forward="false" selection-start-line="180" selection-start-column="49" selection-end-line="180" selection-end-column="49" />
+=======
+        <state relative-caret-position="187">
+          <caret line="11" column="2" lean-forward="false" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
@@ -670,24 +1015,47 @@
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/vendor/js/reviews.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+=======
+    <entry file="file://$PROJECT_DIR$/content-about-us.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="10" lean-forward="true" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+          <folding>
+            <element signature="e#6#87#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/css/landing.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="96" column="87" lean-forward="false" selection-start-line="96" selection-start-column="87" selection-end-line="96" selection-end-column="87" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/css/reset.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="247">
           <caret line="15" column="14" lean-forward="false" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="14" />
+=======
+        <state relative-caret-position="-297">
+          <caret line="30" column="78" lean-forward="false" selection-start-line="30" selection-start-column="78" selection-end-line="30" selection-end-column="78" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/css/landing.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="161">
           <caret line="22" column="49" lean-forward="true" selection-start-line="22" selection-start-column="49" selection-end-line="22" selection-end-column="49" />
           <folding />
@@ -706,26 +1074,43 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="261">
           <caret line="81" column="35" lean-forward="true" selection-start-line="81" selection-start-column="35" selection-end-line="81" selection-end-column="35" />
+=======
+        <state relative-caret-position="340">
+          <caret line="20" column="25" lean-forward="false" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/vendor/css/mobile_main.css">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="255">
           <caret line="15" column="76" lean-forward="false" selection-start-line="15" selection-start-column="76" selection-end-line="15" selection-end-column="76" />
+=======
+        <state relative-caret-position="544">
+          <caret line="32" column="0" lean-forward="true" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
           <caret line="47" column="82" lean-forward="true" selection-start-line="47" selection-start-column="82" selection-end-line="47" selection-end-column="82" />
+=======
+    <entry file="file://$PROJECT_DIR$/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+>>>>>>> parent of 92cd146... add reviews
           <folding />
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/vendor/css/gallery.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -740,10 +1125,19 @@
           <caret line="246" column="51" lean-forward="false" selection-start-line="246" selection-start-column="51" selection-end-line="246" selection-end-column="51" />
           <folding>
             <element signature="e#6#177#0#PHP" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/content-popup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="9" column="15" lean-forward="false" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="15" />
+          <folding>
+            <element signature="n#style#0;n#iframe#0;n#div#2;n#div#0;n#!!top" expanded="true" />
+>>>>>>> parent of 92cd146... add reviews
           </folding>
         </state>
       </provider>
     </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/content-news.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
@@ -782,10 +1176,47 @@
           <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="29" selection-end-column="26" />
           <folding>
             <element signature="e#6#210#0#PHP" expanded="true" />
+=======
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="285" column="39" lean-forward="false" selection-start-line="285" selection-start-column="39" selection-end-line="285" selection-end-column="39" />
+          <folding>
+            <element signature="e#6#150#0#PHP" expanded="true" />
+            <element signature="e#8183#8187#0#HTML" expanded="true" />
+            <element signature="e#8684#8720#0#HTML" expanded="true" />
+            <element signature="e#8770#8793#0#HTML" expanded="true" />
+            <element signature="e#9542#9578#0#HTML" expanded="true" />
+            <element signature="e#9737#9760#0#HTML" expanded="true" />
+            <element signature="e#9958#9976#0#HTML" expanded="true" />
+            <element signature="e#10576#10598#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="553">
+          <caret line="192" column="32" lean-forward="true" selection-start-line="192" selection-start-column="32" selection-end-line="192" selection-end-column="32" />
+          <folding>
+            <element signature="e#6#177#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/js/landing.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="598">
+          <caret line="200" column="34" lean-forward="false" selection-start-line="200" selection-start-column="34" selection-end-line="200" selection-end-column="34" />
+          <folding>
+            <marker date="1541776739461" expanded="true" signature="7528:7554" ph="..." />
+            <marker date="1541776739461" expanded="true" signature="7568:7633" ph="..." />
+>>>>>>> parent of 92cd146... add reviews
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
     <entry file="file://$PROJECT_DIR$/content-card.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -818,6 +1249,21 @@
             <element signature="e#10529#10547#0#HTML" expanded="true" />
             <element signature="e#11050#11072#0#HTML" expanded="true" />
           </folding>
+=======
+    <entry file="file://$PROJECT_DIR$/vendor/js/comand.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-144">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="13" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/content-team.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="35" lean-forward="false" selection-start-line="15" selection-start-column="35" selection-end-line="15" selection-end-column="35" />
+          <folding />
+>>>>>>> parent of 92cd146... add reviews
         </state>
       </provider>
     </entry>
