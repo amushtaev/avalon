@@ -38,7 +38,7 @@ wp_reset_postdata(); ?>
 <div class="card">
     <div class="card_name">Разовое посещение</div>
     <div class="card_service" style="display: block; width: 100%;">
-        <img src="./img/1 (3).jpg"  style="max-width: 82%;">
+        <object style="max-width: 82%;" type="image/svg+xml" data="/wp-content/themes/avalon/img/1 (3).svg">
     </div>
     <div class="card_cost">60</div>
 </div>
@@ -59,7 +59,7 @@ wp_reset_postdata(); ?>
     <div class="card_service"  style="display: block; width: 100%;">
                         <span>
                             <p><strong>+15 дней заморозки</strong></p>
-                            <img src="./img/1 (4).jpg" style="max-width: 78%;">
+                            <object style="max-width: 78%;" type="image/svg+xml" data="/wp-content/themes/avalon/img/1 (4).svg"></object>
                         </span>
     </div>
     <div class="card_cost">900</div>

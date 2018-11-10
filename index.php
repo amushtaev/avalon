@@ -110,25 +110,27 @@ endif;
                         <span>Авалон</span>
                         <div>Выберите удобный день</div>
                         <ul>
-                            <li data-value="ek">
+                            <li data-value="понедельник">
                                 <span>понедельник</span>
                             </li>
-                            <li data-value="kn">
+                            <li data-value="среда">
                                 <span>среда</span>
                             </li>
-                            <li data-value="kr">
+                            <li data-value="пятница">
                                 <span>пятница</span>
                             </li>
                         </ul>
+                        <input id="day" type="hidden" value="" name="day" />
                     </span>
                 <br><br>
                 <span class="skew_input" id="free_phone" data-value="">
                         <span>+380</span>
-                        <input type="text" value="" placeholder="__ ___-__-__" maxlength="12">
+                        <input type="text" value="" placeholder="__ ___-__-__" maxlength="12" name="tel">
                     </span>
                 <br><br>
                 <button class="skew_button" onclick="send_freetraining(this)">
                     <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                    <input class="submit-button" type="submit" value="Отправить" style="width: 100%;height: inherit;opacity: 0; position: relative; top: -18px;"/>
                     <img src="/wp-content/themes/avalon/img/loader.gif">
                 </button>
             </div>
@@ -185,6 +187,14 @@ endif;
             </div>
         </div>
     </section>
+    <section class="cont_block" id="block12">
+        <h2>Новости клуба</h2>
+        <ul>
+            <?php
+            get_template_part( 'content', 'news' );
+            ?>
+        </ul>
+    </section>
     <section class="width_block" id="block10">
         <div class="cont_block">
             <div id="club_links">
@@ -197,13 +207,13 @@ endif;
                 </div>
             </div>
             <div id="contacts">
-                <img src="/wp-content/themes/avalon/img/mail.png"><span>avalon@gmail.com</span><br>
-                <img src="/wp-content/themes/avalon/img/post.png"><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg"></object><span>avalon@gmail.com</span><br>
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
             </div>
             <div id="socials">
-                <a href="#" target="_blank"><img src="/wp-content/themes/avalon/img/vk.png"></a>
-                <a href="#" target="_blank"><img src="/wp-content/themes/avalon/img/fb.png"></a>
-                <a href="#" target="_blank"><img src="/wp-content/themes/avalon/img/instagram.png"></a>
+                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg"></object></a>
+                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg"></object></a>
+                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg"></object></a>
             </div>
         </div>
     </section>

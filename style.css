@@ -39,7 +39,7 @@ sub { vertical-align:sub; font-size:0.7em; }
 .skew_button:active:before, .skew_button.wait:before {width:0; height:100%; left:-18px; top:0;}
 .skew_button:active:after, .skew_button.wait:after {height:0;}
 .skew_button.wait {cursor:default;}
-.skew_button span {display:inline-block;}
+.skew_button span {display:inline-block;padding: 11px;}
 .skew_button img {display:none;}
 .skew_button.wait span {display:none;}
 .skew_button.wait img {display:inline-block;}

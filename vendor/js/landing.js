@@ -162,6 +162,7 @@ function hide_cards() {
 }
 
 function send_freetraining(b) {
+    jQuery('#day').val(jQuery('#free_club').data('value'))
     if ( jQuery(b).hasClass('wait') ) { return; }
     if ( !jQuery('#free_club').hasClass('empty') ) {
         jQuery('#free_club').removeClass('error');
@@ -180,11 +181,12 @@ function send_freetraining(b) {
     localStorage.setItem( 'free_fixed', 'clicked' );
     jQuery(b).addClass('wait');
     jQuery.ajax({
-        url : 'ajax.php',
+        action: "avalon_action",
+        url : '/wp-content/themes/avalon/mail.php',
         type : 'POST',
         data : {
             module : 'code',
-            club : jQuery('#free_club').data('value'),
+            day : jQuery('#free_club').data('value'),
             phone : tel
         },
         success : function (data, textStatus) {

@@ -240,3 +240,33 @@ function wpse_load_css() {
     wp_enqueue_style('gallery', $plugin_url . '/vendor/css/gallery.css');
 }
 //add_action( 'wp_enqueue_scripts', 'wpse_load_css');
+
+function ajax_form(){
+    $name = $_REQUEST['day'];
+    $tel = $_REQUEST['tel'];
+    $response = '';
+    $thm  = 'Заказ звонка';
+    $thm  = "=?utf-8?b?". base64_encode($thm) ."?=";
+    $msg = "Имя: ".$name."<br/>
+        Телефон: ".$tel ."<br/>";
+    $mail_to = 'здесь адрес почты, на которую будет отправляться сообщение';
+    $headers = "Content-Type: text/html; charset=utf-8\n";
+    $headers .= 'From: имя отправителя' . "\r\n";
+
+// Отправляем почтовое сообщение
+
+    if(mail($mail_to, $thm, $msg, $headers)){
+        $response = 'Сообщение отправлено';
+    }else
+        $response = 'Ошибка при отправке';
+
+// Сообщение о результате отправки почты
+
+    if ( defined( 'DOING_AJAX' ) && DOING_AJAX ){
+        echo $response;
+        wp_die();
+    }
+}
+
+add_action('wp_ajax_nopriv_ajax_order', 'ajax_form' );
+add_action('wp_ajax_ajax_order', 'ajax_form' );

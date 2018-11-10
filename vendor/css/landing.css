@@ -257,3 +257,38 @@
     transform: skewX(-20deg);
     -webkit-transform: skewX(-20deg);
 }
+#block12 {}
+#block12 span[aria-label]{font-weight: bold; color: #7f0082;}
+#block12 span {line-height: 20px;}
+#block12 li {
+    width: 33%;
+    padding:10px 15px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: 400px;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 5px;
+    top: 0;
+    opacity: 1;
+    transition: 0.2s;
+    border: 1px solid #7f0082;
+    border-radius: 8px;
+    margin-top: 57px;
+overflow: hidden;}
+#block12 img {
+    border-radius: 50%;
+    float: left;
+    padding-right: 15px;
+}
+#block12 h2 {
+    font-size: 32px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    width: 100%;
+    float: right;
+    display: inline-block;
+    padding-bottom: 15px;
+    margin-top: 20px;
+}
