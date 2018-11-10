@@ -6,21 +6,20 @@
  */
 ?>
 
-
 <?php
 $args = array( 'posts_per_page' => 10,
     'category_name' => 'reviews' );
 //thumbnail, medium, large или full
-$team = get_posts( $args );
+$reviews = get_posts( $args );
 $size = 'thumbnail';
-foreach ( $team as $post ) : setup_postdata( $post ); ?>
+foreach ( $reviews as $post ) : setup_postdata( $post ); ?>
     <div class="review">
         <div class="rev_img">
             <?php if (get_the_post_thumbnail_url(get_the_ID(), $size )) : ?>
-            <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), $size ); ?>"
-                 <?php else : ?>
-            <img src="./img/placeholder.jpg">
-        <?php endif; ?>
+                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), $size ); ?>">
+            <?php else : ?>
+                <img src="/wp-content/themes/avalon/img/placeholder.jpg">
+            <?php endif; ?>
         </div>
         <b><?php echo get_the_title() ?></b>
         <div class="rev_text">
@@ -28,7 +27,10 @@ foreach ( $team as $post ) : setup_postdata( $post ); ?>
             <span><br></span>
             <span><?php the_content(); ?></span>
         </div>
+        <div class="rev_smalltext">
+            <span> Description small text.</span>
+        </div>
     </div>
-<?php
+    <?php
 endforeach;
 wp_reset_postdata(); ?>

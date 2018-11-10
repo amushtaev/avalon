@@ -19,7 +19,6 @@ $category_id = $categories[0]->cat_ID;
 endif;
 ?>
 
-
 <div id="content">
     <div id="getwidth"></div>
 
@@ -27,8 +26,8 @@ endif;
             <div id="premenuwidth" class="stickytop" style="right: 17px;">
                 <div id="premenu">
                     <?php get_template_part( 'navigation/navigation', 'top' ); ?>
-                </div><!-- .wrap -->
-            </div><!-- .navigation-top -->
+                </div>
+            </div>
         <?php endif; ?>
 
     <section class="cont_block" id="block1">
@@ -180,47 +179,7 @@ endif;
             <div id="b9_button1">
                 <button class="center_button scroll red_button" href="#block5" top="250"><span>Попробовать бесплатно</span></button>
             </div>
-            <div class="card">
-                <div class="card_name">Разовое посещение</div>
-                <div class="card_service" style="display: block; width: 100%;">
-                    <img src="./img/1 (3).jpg"  style="max-width: 82%;">
-                </div>
-                <div class="card_cost">60</div>
-            </div>
-            <div class="card">
-                <div class="card_name">Абонемент<br />Утро-День</div>
-                <div class="card_service">
-                        <span>
-                            <p><strong>посещение</strong></p>
-                            <p>пн-пт 7.00-22.00</p>
-                            <p>сб 10.00-20.</p>
-                            <p>вс 11.00-18.00</p>
-                        </span>
-                </div>
-                <div class="card_cost">900</div>
-            </div>
-            <div class="card">
-                <div class="card_name">Абонемент <br />на 3 месяца</div>
-                <div class="card_service"  style="display: block; width: 100%;">
-                        <span>
-                            <p><strong>+15 дней заморозки</strong></p>
-                            <img src="./img/1 (4).jpg" style="max-width: 78%;">
-                        </span>
-                </div>
-                <div class="card_cost">900</div>
-            </div>
-            <div class="card">
-                <div class="card_service" style="top: 30px;">
-                        <span>
-                            <p>Доплата за тренера разовая <strong>130грн</strong></p>
-                            <p>Доплата за 10 занятий/месяц с тренером <strong>1170грн</strong></p>
-                            <p>Программа тренировки  или питания <strong>100грн</strong></p>
-                            <p>Аренда шкафчика <strong>50грн</strong></p>
-                            <p>Поломка или потеря ключа <strong>50грн</strong></p>
-
-                        </span>
-                </div>
-            </div>
+                <?php get_template_part( 'content', 'card' ); ?>
             <div id="cards_buyed">
                 <span style="color:#7f0082;">Первое посещение - БЕСПЛАТНО</span>
             </div>
@@ -238,13 +197,13 @@ endif;
                 </div>
             </div>
             <div id="contacts">
-                <img src="./img/mail.png"><span>champion-club@mail.ua</span><br>
-                <img src="./img/post.png"><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
+                <img src="/wp-content/themes/avalon/img/mail.png"><span>avalon@gmail.com</span><br>
+                <img src="/wp-content/themes/avalon/img/post.png"><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
             </div>
             <div id="socials">
-                <a href="#" target="_blank"><img src="./img/vk.png"></a>
-                <a href="#" target="_blank"><img src="./img/fb.png"></a>
-                <a href="#" target="_blank"><img src="./img/instagram.png"></a>
+                <a href="#" target="_blank"><img src="/wp-content/themes/avalon/img/vk.png"></a>
+                <a href="#" target="_blank"><img src="/wp-content/themes/avalon/img/fb.png"></a>
+                <a href="#" target="_blank"><img src="/wp-content/themes/avalon/img/instagram.png"></a>
             </div>
         </div>
     </section>
