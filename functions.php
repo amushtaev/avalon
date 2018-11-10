@@ -241,6 +241,11 @@ function wpse_load_css() {
 }
 //add_action( 'wp_enqueue_scripts', 'wpse_load_css');
 
+function my_deregister_scripts(){
+    wp_deregister_script( 'wp-embed' );
+}
+add_action( 'wp_footer', 'my_deregister_scripts' );
+
 function ajax_form(){
     $name = $_REQUEST['day'];
     $tel = $_REQUEST['tel'];

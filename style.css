@@ -51,7 +51,7 @@ sub { vertical-align:sub; font-size:0.7em; }
 
 .skew_select {display:inline-block; box-sizing:border-box; background:#fff; border:none; border-radius:7px;
     height:36px; position:relative; z-index:999; cursor:pointer; text-align:left; white-space:nowrap}
-.skew_select:after {content:url('/wp-content/themes/avalon/img/select_arrow.png'); position:absolute; right:10px; top:10px; z-index:3;}
+.skew_select:after { position:absolute; right:10px; top:10px; z-index:3;}
 .skew_select>span, .skew_select>div {display:inline-block; position:relative; padding:11px 0; z-index:2;}
 .skew_select>span {color:#969696; text-align:center; width:90px;}
 .skew_select>div {position:absolute; display:block; height:100%; left:80px; right:34px; top:0; overflow:hidden; text-overflow:ellipsis; box-sizing:border-box;}

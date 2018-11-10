@@ -174,7 +174,7 @@ function gal_setimage(img) {
         } else {
             gal_endani(thsc, wd, hg);
         }
-    }
+    };
     hiddenImg.src = img;
 }
 

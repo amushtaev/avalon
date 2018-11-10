@@ -22,7 +22,7 @@ mails = {
         });
     }
     
-}
+};
 
 function mlsubmit() {
     mails.send({

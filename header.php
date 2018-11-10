@@ -9,9 +9,7 @@
  * @since 1.0
  * @version 1.0
  */
-echo "header is loads";
 ?><!DOCTYPE html>
-<html <?php language_attributes(); ?>>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -29,16 +27,7 @@ echo "header is loads";
     <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">
 
     <?php wp_head(); ?>
+    <?php echo "hiader";?>
 </head>
 
-<body>
-    <div id="free_fixed" style="right: 17px; margin-top: -110px; display: block;">
-        <div id="ff_top"><div class="ff_bg"></div></div>
-        <div id="ff_center">
-            <div class="ff_bg">
-                <span>Б<br>Е<br>С<br>П<br>Л<br>А<br>Т<br>Н<br>А<br>Я</span>
-                <span>Т<br>Р<br>Е<br>Н<br>И<br>Р<br>О<br>В<br>К<br>А</span>
-            </div>
-        </div>
-        <div id="ff_bottom"><div class="ff_bg"></div></div>
-    </div>
+

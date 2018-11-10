@@ -26,7 +26,7 @@ jQuery(document).ready(function() {
                 for (var i = 1; i <= cnt; i++) {
                     do {
                         var v = Math.floor(Math.random() * l);
-                    } while (r.indexOf(v) != -1)
+                    } while (r.indexOf(v) != -1);
                     r.push(v);
                     jQuery('#command').append(jQuery('#pcommand .command li').eq(v).clone().css('top', 0));
                 }
@@ -101,7 +101,7 @@ jQuery(document).ready(function() {
             }
         }
     });
-    return;
+
 });
 
 function scroll_to( href, top ) {
@@ -162,7 +162,7 @@ function hide_cards() {
 }
 
 function send_freetraining(b) {
-    jQuery('#day').val(jQuery('#free_club').data('value'))
+    jQuery('#day').val(jQuery('#free_club').data('value'));
     if ( jQuery(b).hasClass('wait') ) { return; }
     if ( !jQuery('#free_club').hasClass('empty') ) {
         jQuery('#free_club').removeClass('error');
