@@ -21,6 +21,5 @@ foreach ( $news as $post ) : setup_postdata( $post ); ?>
     </li>
 <?php
     $i++;
-    echo $i;
 endforeach;
 wp_reset_postdata(); ?>

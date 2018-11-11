@@ -9,7 +9,6 @@
 * @since 1.0
 */
 
-get_header();
 foreach (get_the_category() as $category) {
 $post_type = $category->slug;
 }
@@ -18,7 +17,22 @@ $categories = get_the_category();
 $category_id = $categories[0]->cat_ID;
 endif;
 ?>
+    <!DOCTYPE html>
 
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="keywords" content="фитнес, тренажёры, харьков, чемпион, спорт">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+
+        <link rel="icon" href="templates/img/favicon.ico" type="image/x-icon">
+        <link rel="shortcut icon" href="templates/img/favicon.ico" type="image/x-icon">
+        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
+        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
+        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/landing.css?ver=4.9.8">
+        <link rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_main.css?ver=4.9.8">
+        <link rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_landing.css?ver=4.9.8">
+        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">
+    </head>
 <body>
     <div id="free_fixed" style="right: 17px; margin-top: -110px; display: block;">
         <div id="ff_top"><div class="ff_bg"></div></div>
@@ -62,10 +76,10 @@ endif;
                     </div>
                 </div>
                 <style>
-                    #slider {width: 1000px;height: 400pxposition: relative;}
-                    #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center;}
+                    #slider {width: 1000px;height: 400px;position: relative;}
+                    #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center; height: 100%;}
                     #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
-                    #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;}
+                    #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
                     #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
                 </style>
             </div>
@@ -220,13 +234,13 @@ endif;
                     </div>
                 </div>
                 <div id="contacts">
-                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg"></object><span>avalon@gmail.com</span><br>
-                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
+                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalon@gmail.com</span><br>
+                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
                 </div>
                 <div id="socials">
-                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg"></object></a>
-                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg"></object></a>
-                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg"></object></a>
+                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>
+                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43"></object></a>
+                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43"></object></a>
                 </div>
             </div>
         </section>
@@ -247,11 +261,21 @@ endif;
     </div>
 <?php
 get_template_part( 'content', 'popup' );
-
-get_footer();
-
+?>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/jquery.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/jquery.mask.js"></script>
+    <script async type="text/javascript" src="/wp-content/themes/avalon/vendor/js/comand.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/main.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/landing.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/banner.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/gallery.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/mails.js"></script>
+    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/reviews.js"></script>
+</body>
+</html>
+<?php
 function query_posts_for_main($query_string, $slug, $n){
-query_posts($query_string .'category_name='. $slug .'&posts_per_page='. $n .'');
+    query_posts($query_string .'category_name='. $slug .'&posts_per_page='. $n .'');
     while ( have_posts() ) : the_post();
         get_template_part( 'content', $slug );
     endwhile;

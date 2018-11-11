@@ -9,7 +9,9 @@
 <div class="card">
     <div class="card_name">Разовое посещение</div>
     <div class="card_service" style="display: block; width: 100%;">
-        <object style="max-width: 82%;" type="image/svg+xml" data="/wp-content/themes/avalon/img/1_3.svg">
+        <span>
+            <object style="max-width: 78%;" type="image/svg+xml" data="/wp-content/themes/avalon/img/1_3.svg"></object>
+        </span>
     </div>
     <div class="card_cost">60</div>
 </div>
