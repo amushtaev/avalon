@@ -127,25 +127,16 @@ function avalon_setup() {
             ),
         ),
     );
-
-    /**
-     * Filters Twenty Seventeen array of starter content.
-     *
-     * @since Twenty Seventeen 1.1
-     *
-     * @param array $starter_content Array of starter content.
-     */
     $starter_content = apply_filters( 'avalon_starter_content', $starter_content );
-
     add_theme_support( 'starter-content', $starter_content );
 }
 add_action( 'after_setup_theme', 'avalon_setup' );
 
-register_nav_menus( array(
+register_nav_menus(array(
 'top'    => __( 'Top Menu', 'avalon' ),
 'mobile'    => __( 'Top Mobile Menu', 'avalon' ),
 'social' => __( 'Social Links Menu', 'avalon' ),
-) );
+));
 
 function avalon_widgets_init() {
     register_sidebar( array(
@@ -162,20 +153,20 @@ function avalon_widgets_init() {
         'name'          => __( 'Footer 1', 'avalon' ),
         'id'            => 'sidebar-2',
         'description'   => __( 'Add widgets here to appear in your footer.', 'avalon' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
     ) );
 
     register_sidebar( array(
         'name'          => __( 'Footer 2', 'avalon' ),
         'id'            => 'sidebar-3',
         'description'   => __( 'Add widgets here to appear in your footer.', 'avalon' ),
-        'before_widget' => '<section id="%1$s" class="widget %2$s">',
-        'after_widget'  => '</section>',
-        'before_title'  => '<h2 class="widget-title">',
-        'after_title'   => '</h2>',
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h3 class="widget-title">',
+        'after_title'   => '</h3>',
     ) );
 }
 add_action( 'widgets_init', 'avalon_widgets_init' );
@@ -194,31 +185,34 @@ function avalon_excerpt_more( $link ) {
 }
 add_filter( 'excerpt_more', 'avalon_excerpt_more' );
 
-function wpse_load_js() {
-    $plugin_url = get_template_directory_uri( __FILE__ );
-
-    wp_enqueue_script('jquery', $plugin_url . '/vendor/js/jquery.js',true);
-    wp_enqueue_script('jquerymask', $plugin_url . '/vendor/js/jquery.mask.js',array(), '',true);
-    //wp_enqueue_script('comand', $plugin_url . '/vendor/js/comand.js',array(), '',true);
-    wp_enqueue_script('main', $plugin_url . '/vendor/js/main.js',array(), '',true);
-    wp_enqueue_script('banner', $plugin_url . '/vendor/js/banner.js',array(), '',true);
-    wp_enqueue_script('gallery', $plugin_url . '/vendor/js/gallery.js',array(), '',true);
-    wp_enqueue_script('mails', $plugin_url . '/vendor/js/mails.js',array(), '',true);
-    wp_enqueue_script('reviews', $plugin_url . '/vendor/js/reviews.js',array(), '',true);
-    wp_enqueue_script('landing', $plugin_url . '/vendor/js/landing.js',array(), '',true);
+function jquerymask(){
+    wp_register_script( 'jquerymask', get_template_directory_uri() . '/vendor/js/jquery.mask.js', array( 'jquery' ), NULL, false );
+    wp_enqueue_script( 'jquerymask' );
 }
-add_action('wp_enqueue_scripts', 'wpse_load_js');
+add_action( 'wp_enqueue_scripts', 'jquerymask' );
+function landing(){
+    wp_register_script( 'landing', get_template_directory_uri() . '/vendor/js/landing.js', array( '' ), NULL, false );
+    wp_enqueue_script( 'landing' );
+}
+add_action( 'wp_enqueue_scripts', 'landing' );
+function gallery(){
+    wp_register_script( 'gallery', get_template_directory_uri() . '/vendor/js/gallery.js', array( 'jquery' ), NULL, false );
+    wp_enqueue_script( 'gallery' );
+}
+add_action( 'wp_enqueue_scripts', 'gallery' );
+function main(){
+    wp_register_script( 'main', get_template_directory_uri() . '/vendor/js/main.js', array( 'jquery' ), NULL, false );
+    wp_enqueue_script( 'main' );
+}
+add_action( 'wp_enqueue_scripts', 'main' );
 
 function script_add_defer_attribute( $tag, $handle ) {
     $handles = array(
-        'jquery',
         'jquerymask',
-        'comand',
         'main',
         'landing',
         'banner',
         'gallery',
-        'mails',
         'reviews',
     );
     foreach( $handles as $defer_script) {
@@ -240,38 +234,3 @@ function wpse_load_css() {
     wp_enqueue_style('gallery', $plugin_url . '/vendor/css/gallery.css');
 }
 //add_action( 'wp_enqueue_scripts', 'wpse_load_css');
-
-function my_deregister_scripts(){
-    wp_deregister_script( 'wp-embed' );
-}
-add_action( 'wp_footer', 'my_deregister_scripts' );
-
-function ajax_form(){
-    $name = $_REQUEST['day'];
-    $tel = $_REQUEST['tel'];
-    $response = '';
-    $thm  = 'Заказ звонка';
-    $thm  = "=?utf-8?b?". base64_encode($thm) ."?=";
-    $msg = "Имя: ".$name."<br/>
-        Телефон: ".$tel ."<br/>";
-    $mail_to = 'здесь адрес почты, на которую будет отправляться сообщение';
-    $headers = "Content-Type: text/html; charset=utf-8\n";
-    $headers .= 'From: имя отправителя' . "\r\n";
-
-// Отправляем почтовое сообщение
-
-    if(mail($mail_to, $thm, $msg, $headers)){
-        $response = 'Сообщение отправлено';
-    }else
-        $response = 'Ошибка при отправке';
-
-// Сообщение о результате отправки почты
-
-    if ( defined( 'DOING_AJAX' ) && DOING_AJAX ){
-        echo $response;
-        wp_die();
-    }
-}
-
-add_action('wp_ajax_nopriv_ajax_order', 'ajax_form' );
-add_action('wp_ajax_ajax_order', 'ajax_form' );

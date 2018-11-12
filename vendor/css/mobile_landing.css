@@ -142,3 +142,21 @@
 .card {display: inline-block;vertical-align: top; position: relative; width: 95%; height: 300px; cursor: pointer; margin: 5px; top: 0;
     opacity: 0.9; transition: 0.2s; border: 1px solid #7f0082; border-radius: 8px; margin-top: 57px;}
 #b9_button1 {position: absolute; top: -65px; right: 50px;}
+#block12 li {
+    width: 87%!important;
+    padding: 10px 15px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    height: auto;
+    cursor: pointer;
+    background-color: #fff;
+    margin: 5px;
+    top: 0;
+    opacity: 1;
+    transition: 0.2s;
+    border: 1px solid #7f0082;
+    border-radius: 8px;
+    margin-top: 10px;
+    overflow: hidden;
+}

@@ -261,3 +261,7 @@ function gal_extrflnm(minnm) {
 jQuery(window).resize(function () {
     if ( jQuery('#gallery').is(':visible') ) { gal_resize(); }
 });
+
+jQuery('#photos img').click(function () {
+    gal_showpict(this.parentNode);
+});

@@ -26,12 +26,27 @@ endif;
 
         <link rel="icon" href="templates/img/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="templates/img/favicon.ico" type="image/x-icon">
-        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
-        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
-        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/landing.css?ver=4.9.8">
-        <link rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_main.css?ver=4.9.8">
-        <link rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_landing.css?ver=4.9.8">
-        <link rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/landing.css?ver=4.9.8">
+    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_main.css?ver=4.9.8">
+    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_landing.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">
+    <style>
+        body {font-size:14px; font-family:Arial, Helvetica, sans-serif;}
+        strong {font-weight: bold;}
+        #content {position:fixed; left:0; top:0; width:100%; bottom:0; overflow:auto; background-color:#fff;}
+        .width_block {width:100%; min-width:1000px; position:relative; z-index:1;}
+        .cont_block {width:1000px; box-sizing:border-box; margin:0 auto; position:relative; z-index:1;}
+        h2 {font-size:38px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
+        h3 {font-size:24px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
+        #slider {width: 1000px;height: 400px;position: relative;}
+        #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center; height: 100%;}
+        #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
+        #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
+        #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
+    </style>
+    <?php wp_head(); ?>
     </head>
 <body>
     <div id="free_fixed" style="right: 17px; margin-top: -110px; display: block;">
@@ -58,7 +73,9 @@ endif;
             <?php endif; ?>
 
         <section class="cont_block" id="block1">
-            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
+            <a href="https://avalon.stimul.fitness/" class="svg">
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
+            </a>
             <div id="clubs_link">
                 <a href="#"><span></span></a>
             </div>
@@ -75,13 +92,7 @@ endif;
                         <div onclick="bn_anishow('slider',1)" class="slider_now_but"></div>
                     </div>
                 </div>
-                <style>
-                    #slider {width: 1000px;height: 400px;position: relative;}
-                    #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center; height: 100%;}
-                    #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
-                    #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
-                    #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
-                </style>
+
             </div>
         </section>
         <section id="mobile_banner">
@@ -89,11 +100,13 @@ endif;
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/header_slider.svg"></object>
             </a>
         </section>
-        <?php
-        if ( have_posts() ) :
-            query_posts_for_main($query_string, 'about-us', '1');
-        endif;
-        ?>
+        <section class="cont_block" id="block3">
+            <?php
+            if ( have_posts() ) :
+                query_posts_for_main($query_string, 'about-us', '1');
+            endif;
+            ?>
+        </section>
         <section class="cont_block" id="block4">
             <h2>ПОЧЕМУ ВЫБИРАЮТ НАС?</h2>
             <ul id="b4_ul1">
@@ -254,7 +267,7 @@ endif;
         <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="mobile_logo"></object>
         <div id="clubs_btn">
             <span>Меню</span>
-            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/clubs_btn.svg"></object>
+            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/clubs_btn.svg" width="17" height="20"></object>
             <div>
             </div>
         </div>
@@ -262,15 +275,12 @@ endif;
 <?php
 get_template_part( 'content', 'popup' );
 ?>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/jquery.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/jquery.mask.js"></script>
-    <script async type="text/javascript" src="/wp-content/themes/avalon/vendor/js/comand.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/main.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/landing.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/banner.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/gallery.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/mails.js"></script>
-    <script type="text/javascript" src="/wp-content/themes/avalon/vendor/js/reviews.js"></script>
+    <!--<link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/landing.css?ver=4.9.8">
+    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_main.css?ver=4.9.8">
+    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_landing.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">-->
 </body>
 </html>
 <?php

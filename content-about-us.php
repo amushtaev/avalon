@@ -6,8 +6,6 @@
  */
 global $post;
 ?>
-
-<section class="cont_block" id="block3">
     <?php
     the_title( '<h2 id="b3_text1">', '</h2>' );
     ?>
@@ -22,4 +20,3 @@ global $post;
             <?php the_content(); ?>
         </p>
     </div>
-</section>

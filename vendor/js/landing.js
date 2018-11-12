@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
     setTimeout(function() {
         clearTimeout(intervalID);
     }, 10000);
-
+//пофиксить из-за этого виснет страница
     var l = jQuery('#smallreviews .review').length;
     if(l > 0) {
         var r = 0;
