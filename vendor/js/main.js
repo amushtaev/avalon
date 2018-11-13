@@ -29,6 +29,44 @@ jQuery("select.skew_select").replaceWith(function(){
     return ret;
 });
 
+if ( !mobile ) {
+    jQuery('.skew_select').hover(
+        function() {
+            jQuery(this).find('ul').css('display','block');
+            jQuery(this).find('li').each(function(i){
+                jQuery(this).stop().delay(i*20).css('visibility','visible').animate({'top':0,'opacity':1},200);
+            });
+        },
+        function() {
+            hide_select(this);
+        }
+    );
+    jQuery('.skew_select li').click(function() {
+        var sl = jQuery(this).parents('.skew_select').removeClass('empty');
+        var val = jQuery(this).data('value');
+        var text = jQuery(this).children('span').html();
+        sl.data('value',val).children('div').html( jQuery(this).children('span').html() );
+        hide_select(sl);
+        if ( sl.data('change') != '' ) {
+            if ( typeof window[sl.data('change')] == 'function' ) {
+                window[sl.data('change')](val,text);
+            }
+        }
+    });
+} else {
+    jQuery('.skew_select>select').change(function() {
+        var sl = jQuery(this).parents('.skew_select').removeClass('empty');
+        var val = jQuery(this).val();
+        var text = jQuery(this).children(':selected').text();
+        sl.data('value',val).children('div').html( text );
+        if ( sl.data('change') != '' ) {
+            if ( typeof window[sl.data('change')] == 'function' ) {
+                window[sl.data('change')](val,text);
+            }
+        }
+    });
+}
+
 var free_fixed = jQuery('#free_fixed');
 if ( localStorage.getItem('free_fixed') == 'clicked' ) {
     free_fixed.remove();
@@ -46,6 +84,26 @@ jQuery('#free_fixed .ff_bg').hover(
     free_fixed.fadeTo( 300, 0, function(){ free_fixed.hide(); } );
 });
 
+jQuery("input.skew_input").replaceWith(function(){
+    return '<span class="skew_input" id="'+jQuery(this).attr('id')+'" data-value="'+jQuery(this).val()+'"><span>'+jQuery(this).attr('placeholder')+'</span><input type="text" value="'+jQuery(this).val()+'"></span>';
+});
+jQuery('.skew_input').click(function () {
+    jQuery(this).children('input').focus();
+});
+jQuery('.skew_input input').change(function () {
+    jQuery(this).parents('.skew_input').data('value',jQuery(this).val());
+});
+
+jQuery('#popups').click(function (e) {
+    if ( e.target.id!='popups' && e.target.id!='popups_close' ) { return; }
+    jQuery('#popups').removeClass('popups_visible');
+    jQuery('#popups>div').removeClass('popups_center').addClass('popups_top');
+    setTimeout(function() {
+        jQuery('#popups>div.popups_top').removeClass('popups_top');
+        jQuery('#popups>div').show();
+    },300);
+});
+
 jQuery('#popups').click(function (e) {
     if ( e.target.id!='popups' && e.target.id!='popups_close' ) { return; }
     jQuery('#popups').removeClass('popups_visible');
@@ -58,6 +116,7 @@ jQuery('#popups').click(function (e) {
 
 jQuery("#menu li a, .scroll").click(function () {
     scroll_to( jQuery(this).attr("href"), jQuery(this).attr("top") );
+    window.location.href = jQuery(this).attr("href");
     return false;
 });
 
@@ -108,19 +167,24 @@ jQuery( '#free_phone input' ).mask( '00 000-00-00', {
 var intervalID = setInterval(function(){
     if(document.querySelectorAll("#pcommand li").length > 0) {
         clearInterval(intervalID);
-        var l = jQuery('#pcommand .command li').length;
-        if (l > 0) {
-            var r = [];
-            var v = 0;
-            var cnt = 3;
-            var cnt = l < cnt ? l : cnt;
-            for (var i = 1; i <= cnt; i++) {
-                do {
-                    var v = Math.floor(Math.random() * l);
-                } while (r.indexOf(v) != -1);
-                r.push(v);
-                jQuery('#command').append(jQuery('#pcommand .command li').eq(v).clone().css('top', 0));
-            }
+        var arr = document.querySelectorAll('#pcommand .command li').length;
+        var l = generateArrayRandomNumber(0, arr);
+        for (var i = 0; i < l.length; i++) {
+            jQuery('#command').append(jQuery('#pcommand .command li').eq(i).clone().css('top', 0));
+        }
+    }
+}, 100);
+setTimeout(function() {
+    clearTimeout(intervalID);
+}, 5000);
+
+var intervaReview = setInterval(function(){
+    if(document.querySelectorAll('#smallreviews .review').length > 0) {
+        clearInterval(intervaReview);
+        var arr = document.querySelectorAll('#smallreviews .review').length;
+        var l = generateArrayRandomNumber(0, arr);
+        for (var i = 0; i < l.length; i++) {
+            jQuery('#reviews').append(jQuery('#smallreviews .review').eq(i).clone());
         }
     }
 }, 100);
@@ -179,7 +243,6 @@ function scroll_to( href, top ) {
     if(top === "undefined") {
         top = 0;
     }
-    console.log(href, "hrefsplit")
     var hrefsplit = href.split("/");
     if(hrefsplit.length > 0) {
         href = hrefsplit[hrefsplit.length -1];
@@ -189,6 +252,71 @@ function scroll_to( href, top ) {
     if ( speed < 400 ) { speed = 400; }
     if ( speed > 1000 ) { speed = 1000; }
     jQuery("#content:not(:animated)").animate( { scrollTop: destination }, speed );
+}
+
+function send_freetraining(b) {
+    jQuery('#day').val(jQuery('#free_club').data('value'));
+    if ( jQuery(b).hasClass('wait') ) { return; }
+    if ( !jQuery('#free_club').hasClass('empty') ) {
+        jQuery('#free_club').removeClass('error');
+    } else {
+        jQuery('#free_club').addClass('error');
+    }
+    var tel = jQuery('#free_phone input').cleanVal();
+    if ( tel.length && tel[0]=='0' ) { tel = tel.substring(1) }
+    if ( /^\d{9}$/.test(tel) ) {
+        jQuery('#free_phone').removeClass('error');
+    } else {
+        jQuery('#free_phone').addClass('error').find('input').focus();
+    }
+    if ( jQuery('#free_club').hasClass('error') || jQuery('#free_phone').hasClass('error') ) { return; }
+    jQuery('#free_fixed').fadeTo( 300, 0, function(){ jQuery('#free_fixed').hide(); } );
+    localStorage.setItem( 'free_fixed', 'clicked' );
+    jQuery(b).addClass('wait');
+    jQuery.ajax({
+        action: "avalon_action",
+        url : '/wp-content/themes/avalon/mail.php',
+        type : 'POST',
+        data : {
+            module : 'code',
+            day : jQuery('#free_club').data('value'),
+            phone : tel
+        },
+        success : function (data, textStatus) {
+            if ( data == 'success' ) {
+                show_popup('free');
+            } else if ( /^isset:/.test(data) ) {
+                alert('Вы уже оставляли заявку '+data.replace('isset:','')+'.\nЕсли вам так и не перезвонили, приносим извенения и просим связаться с нами по телефону интересующего вас клуба.');
+            } else {
+                alert('Не удалось отправить заявку :_(\nПопробуйте ещё раз или свяжитесь с администратором интересующего вас клуба.');
+                console.log(data);
+            }
+        },
+        complete : function (XMLHttpRequest, textStatus) {
+            jQuery(b).removeClass('wait');
+        }
+    });
+}
+
+function generateArrayRandomNumber (min, max) {
+    var totalNumbers 		= max - min + 1,
+        arrayTotalNumbers 	= [],
+        arrayRandomNumbers 	= [],
+        tempRandomNumber;
+
+    while (totalNumbers--) {
+        arrayTotalNumbers.push(totalNumbers + min);
+    }
+
+    while (arrayTotalNumbers.length) {
+        tempRandomNumber = Math.round(Math.random() * (arrayTotalNumbers.length - 1));
+        arrayRandomNumbers.push(arrayTotalNumbers[tempRandomNumber]);
+        arrayTotalNumbers.splice(tempRandomNumber, 1);
+    }
+    if(max > 3) {
+        arrayRandomNumbers.splice(0, 3);
+    }
+    return arrayRandomNumbers;
 }
 
 function c( a ) {

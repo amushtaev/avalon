@@ -45,6 +45,13 @@ endif;
         #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
         #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
         #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
+        .back-top{ margin: -13px auto; cursor:pointer; width:100px; height:40px; text-align:center;
+            z-index:10000; font-size: 22px; line-height: 40px; background:#960174; -webkit-box-shadow: 0 -5px 15px -5px #000;
+            -moz-box-shadow: 0 -5px 15px -5px #000; box-shadow: 0 -5px 15px -5px #000; -webkit-transition: all 300ms linear;
+            -moz-transition: all 300ms linear; -o-transition: all 300ms linear; -ms-transition: all 300ms linear; transition: all 300ms linear;
+            font-family:Arial, Helvetica, sans-serif; color: #fff; border-radius: 5px; }
+        .back-top:hover{background:#c254bb; -webkit-box-shadow: 0 -5px 5px -5px #000;
+            -moz-box-shadow: 0 -5px 5px -5px #000;  box-shadow: 0 -5px 5px -5px #000;}
     </style>
     <?php wp_head(); ?>
     </head>
@@ -83,11 +90,11 @@ endif;
         <section class="width_block" id="block2">
             <div class="cont_block">
                 <div id="slider">
-                    <div id="slider_ani">
-                        <a rel="nofollow" data-target="_blank" href="javascript:show_popup('selectclub')">
-                            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/header_slider.svg"></object>
-                        </a>
-                    </div>
+                    <a rel="nofollow" data-target="_blank" href="javascript:show_popup('selectclub')">
+                        <div id="slider_ani">
+                            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/header_slider.svg" onclick="show_popup('selectclub')"></object>
+                        </div>
+                    </a>
                     <div id="slider_buts">
                         <div onclick="bn_anishow('slider',1)" class="slider_now_but"></div>
                     </div>
@@ -189,6 +196,14 @@ endif;
                 </button>
             </div>
         </section>
+        <section class="cont_block" id="block13" style="background-color: #f1f1f1;width: 100%; margin-top: 100px">
+            <div class="cont_block">
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/personal_training_photo_640x415.svg"></object>
+                <?php
+                    get_template_part( 'content', 'personal' );
+                ?>
+            </div>
+        </section>
         <section class="width_block" id="block7">
             <div class="cont_block">
                 <h2>ГАЛЛЕРЕЯ</h2>
@@ -249,6 +264,7 @@ endif;
                 <div id="contacts">
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalon@gmail.com</span><br>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
+                    <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Авалон Стимул официальный сайт</span><br>
                 </div>
                 <div id="socials">
                     <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>
@@ -258,13 +274,17 @@ endif;
             </div>
         </section>
 
-        <section class="width_block" id="block11" title="Открыть карту" onclick="show_popup('map')"></section>
+        <section class="width_block" id="block11" title="Открыть карту" onclick="show_popup('selectclub')" style="cursor: pointer">
+            <div class="back-top">карта</div>
+        </section>
     </div>
     <div id="mobile_header">
         <?php if ( has_nav_menu( 'mobile' ) ) : ?>
             <?php get_template_part( 'navigation/navigation', 'mobile' ); ?>
         <?php endif; ?>
-        <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="mobile_logo"></object>
+        <a href="https://avalon.stimul.fitness/" class="svg">
+            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="mobile_logo"></object>
+        </a>
         <div id="clubs_btn">
             <span>Меню</span>
             <object type="image/svg+xml" data="/wp-content/themes/avalon/img/clubs_btn.svg" width="17" height="20"></object>
@@ -275,12 +295,6 @@ endif;
 <?php
 get_template_part( 'content', 'popup' );
 ?>
-    <!--<link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/landing.css?ver=4.9.8">
-    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_main.css?ver=4.9.8">
-    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_landing.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">-->
 </body>
 </html>
 <?php

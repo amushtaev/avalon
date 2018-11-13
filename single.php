@@ -14,7 +14,7 @@ get_header();
     <?php endif; ?>
 
     <section class="cont_block" id="block1">
-        <a href="/">
+        <a href="https://avalon.stimul.fitness/" class="svg">
             <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
         </a>
     </section>
@@ -43,5 +43,41 @@ get_header();
             </div>
         </div>
     </article>
+    <section class="width_block" id="block10">
+        <div class="cont_block">
+            <div id="club_links">
+                <div>
+                    <span>(057) 737-58-40</span>
+                </div>
+                <hr>
+                <div>
+                    <span>(063) 767-80-38</span>
+                </div>
+            </div>
+            <div id="contacts">
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalon@gmail.com</span><br>
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
+            </div>
+            <div id="socials">
+                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>
+                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43"></object></a>
+                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43"></object></a>
+            </div>
+        </div>
+    </section>
+</div>
+<div id="mobile_header">
+    <?php if ( has_nav_menu( 'mobile' ) ) : ?>
+        <?php get_template_part( 'navigation/navigation', 'mobile' ); ?>
+    <?php endif; ?>
+    <a href="https://avalon.stimul.fitness/" class="svg">
+        <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="mobile_logo"></object>
+    </a>
+    <div id="clubs_btn">
+        <span>Меню</span>
+        <object type="image/svg+xml" data="/wp-content/themes/avalon/img/clubs_btn.svg" width="17" height="20"></object>
+        <div>
+        </div>
+    </div>
 </div>
 <?php get_footer(); ?>
