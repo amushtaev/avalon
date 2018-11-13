@@ -47,16 +47,17 @@ get_header();
         <div class="cont_block">
             <div id="club_links">
                 <div>
-                    <span>(057) 737-58-40</span>
+                    <span><a href="tel:+380577375840">(057) 737-58-40</a></span>
                 </div>
                 <hr>
                 <div>
-                    <span>(063) 767-80-38</span>
+                    <span><a href="tel:+380637678038">(063) 767-80-38</a></span>
                 </div>
             </div>
             <div id="contacts">
-                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalon@gmail.com</span><br>
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalonsport@gmail.com</span><br>
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
+                <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Авалон Стимул официальный сайт</span><br>
             </div>
             <div id="socials">
                 <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>

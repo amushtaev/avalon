@@ -21,11 +21,11 @@ endif;
 
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <meta name="keywords" content="фитнес, тренажёры, харьков, чемпион, спорт">
+        <meta name="keywords" content="фитнес, тренажёры, харьков, авалон, спорт">
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
-        <link rel="icon" href="templates/img/favicon.ico" type="image/x-icon">
-        <link rel="shortcut icon" href="templates/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
+        <link rel="shortcut icon" href="/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
     <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/reset.css?ver=4.9.8">
     <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
     <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/landing.css?ver=4.9.8">

@@ -240,6 +240,8 @@ function show_popup(p) {
 }
 
 function scroll_to( href, top ) {
+    c(href)
+    c(top)
     if(top === "undefined") {
         top = 0;
     }
@@ -335,7 +337,7 @@ function generateArrayRandomNumber (min, max) {
     return arrayRandomNumbers;
 }
 
-scroll_to(window.location.href, 0);
+//scroll_to(window.location.href, 0);
 
 function c( a ) {
     console.log( a );
