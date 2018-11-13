@@ -3,8 +3,6 @@ var ios = /iphone/i.test( ua ) || /ipad/i.test( ua );
 var android = /android/i.test( ua );
 var mobile = ios || android;
 
-scroll_to( window.location.href, 0)
-
 jQuery("select.skew_select").replaceWith(function(){
     var empty = jQuery(this).data('empty') != undefined;
     if ( empty ) {
@@ -245,8 +243,8 @@ function scroll_to( href, top ) {
     if(top === "undefined") {
         top = 0;
     }
-    var hrefsplit = href.split("/");
-    if(hrefsplit.length > 0) {
+    if(window.location.hash !== "") {
+        var hrefsplit = href.split("/");
         href = hrefsplit[hrefsplit.length -1];
     }
     var destination = jQuery(href).offset().top + jQuery("#content").scrollTop() - ( top || 100 );
@@ -336,6 +334,8 @@ function generateArrayRandomNumber (min, max) {
     }
     return arrayRandomNumbers;
 }
+
+scroll_to(window.location.href, 0);
 
 function c( a ) {
     console.log( a );
