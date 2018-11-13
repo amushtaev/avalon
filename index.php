@@ -26,12 +26,10 @@ endif;
 
         <link rel="icon" href="templates/img/favicon.ico" type="image/x-icon">
         <link rel="shortcut icon" href="templates/img/favicon.ico" type="image/x-icon">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/reset.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/reset.css?ver=4.9.8">
     <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/landing.css?ver=4.9.8">
-    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_main.css?ver=4.9.8">
-    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/vendor/css/mobile_landing.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/vendor/css/gallery.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/landing.css?ver=4.9.8">
+    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/gallery.css?ver=4.9.8">
     <style>
         body {font-size:14px; font-family:Arial, Helvetica, sans-serif;}
         strong {font-weight: bold;}
@@ -172,7 +170,7 @@ endif;
                     <br><br>
                     <span class="skew_input" id="free_phone" data-value="">
                             <span>+380</span>
-                            <input type="text" value="" placeholder="__ ___-__-__" maxlength="12" name="tel">
+                            <input type="text" value="" placeholder="__ ___-__-__" maxlength="12" name="phone">
                         </span>
                     <br><br>
                     <button class="skew_button" onclick="send_freetraining(this)">
@@ -254,15 +252,15 @@ endif;
             <div class="cont_block">
                 <div id="club_links">
                     <div>
-                        <span>(057) 737-58-40</span>
+                        <span><a href="tel:+380577375840">(057) 737-58-40</a></span>
                     </div>
                     <hr>
                     <div>
-                        <span>(063) 767-80-38</span>
+                        <span><a href="tel:+380637678038">(063) 767-80-38</a></span>
                     </div>
                 </div>
                 <div id="contacts">
-                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalon@gmail.com</span><br>
+                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalonsport@gmail.com</span><br>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
                     <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Авалон Стимул официальный сайт</span><br>
                 </div>
@@ -295,6 +293,8 @@ endif;
 <?php
 get_template_part( 'content', 'popup' );
 ?>
+    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/css/mobile_main.css?ver=4.9.8">
+    <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/css/mobile_landing.css?ver=4.9.8">
 </body>
 </html>
 <?php

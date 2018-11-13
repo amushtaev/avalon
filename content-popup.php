@@ -23,7 +23,7 @@
         <div id="pfree">
             <p>Благодарим!<br><br>Ваша заявка успешно отправлена на рассмотрение. Вскоре наш администратор перестанет прыгать от радости и наберёт вас.</p>
             <div>
-                <button class="center_button" onclick="$('#popups_close').click()">ОК</button>
+                <button class="center_button" onclick="jQuery('#popups_close').click()">ОК</button>
             </div>
         </div>
         <span id="popups_close">Закрыть</span>

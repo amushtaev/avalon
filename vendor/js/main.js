@@ -3,6 +3,8 @@ var ios = /iphone/i.test( ua ) || /ipad/i.test( ua );
 var android = /android/i.test( ua );
 var mobile = ios || android;
 
+scroll_to( window.location.href, 0)
+
 jQuery("select.skew_select").replaceWith(function(){
     var empty = jQuery(this).data('empty') != undefined;
     if ( empty ) {
@@ -271,31 +273,47 @@ function send_freetraining(b) {
     }
     if ( jQuery('#free_club').hasClass('error') || jQuery('#free_phone').hasClass('error') ) { return; }
     jQuery('#free_fixed').fadeTo( 300, 0, function(){ jQuery('#free_fixed').hide(); } );
-    localStorage.setItem( 'free_fixed', 'clicked' );
     jQuery(b).addClass('wait');
-    jQuery.ajax({
-        action: "avalon_action",
-        url : '/wp-content/themes/avalon/mail.php',
-        type : 'POST',
-        data : {
-            module : 'code',
-            day : jQuery('#free_club').data('value'),
-            phone : tel
-        },
-        success : function (data, textStatus) {
-            if ( data == 'success' ) {
-                show_popup('free');
-            } else if ( /^isset:/.test(data) ) {
-                alert('Вы уже оставляли заявку '+data.replace('isset:','')+'.\nЕсли вам так и не перезвонили, приносим извенения и просим связаться с нами по телефону интересующего вас клуба.');
-            } else {
-                alert('Не удалось отправить заявку :_(\nПопробуйте ещё раз или свяжитесь с администратором интересующего вас клуба.');
-                console.log(data);
+    var today = new Date();
+    var dd = today.getDate();
+    var mm = today.getMonth()+1; //January is 0!
+    var yyyy = today.getFullYear();
+    if(dd<10) {
+        dd = '0'+dd
+    }
+    if(mm<10) {
+        mm = '0'+mm
+    }
+    today = dd;
+    if (dd === parseInt(localStorage.getItem('day')) && (parseInt(localStorage.getItem('day'))-dd) < 2 ) {
+        alert('Вы уже оставляли заявку '+localStorage.getItem('day')+'/'+localStorage.getItem('manth')+'.\nЕсли вам так и не перезвонили, приносим извенения и просим связаться с нами по телефону нашего клуба.');
+        jQuery("#block5 .skew_button img").hide();
+    } else if (localStorage.getItem('phone')){
+        alert('Не удалось отправить заявку :_(\nПопробуйте ещё раз или свяжитесь с администратором нашего клуба.');
+        jQuery("#block5 .skew_button img").hide();
+    }
+    if(!localStorage.getItem('phone')) {
+        jQuery.ajax({
+            //action: "avalon_action",
+            url : '/wp-content/themes/avalon/mail.php',
+            type : 'POST',
+            data : {
+                day : jQuery('#free_club').data('value'),
+                phone : tel
+            },
+            success : function (data, textStatus) {
+                if ( textStatus == 'success' ) {
+                    localStorage.setItem('phone', tel);
+                    localStorage.setItem('day', dd);
+                    localStorage.setItem('manth', mm);
+                    show_popup('free');
+                }
+            },
+            complete : function (XMLHttpRequest, textStatus) {
+                jQuery(b).removeClass('wait');
             }
-        },
-        complete : function (XMLHttpRequest, textStatus) {
-            jQuery(b).removeClass('wait');
-        }
-    });
+        });
+    }
 }
 
 function generateArrayRandomNumber (min, max) {
