@@ -236,7 +236,13 @@ endif;
                 </div>
                     <?php get_template_part( 'content', 'card' ); ?>
                 <div id="cards_buyed">
-                    <span style="color:#7f0082;">Первое посещение - БЕСПЛАТНО</span>
+                    <div style="color:#7f0082;margin: 10px 0;">Доплата за тренера разовая <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
+    color: #7f0082;">130</strong>грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;">Доплата за 10 занятий/месяц с тренером <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700; color: #7f0082;">1170</strong> грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;">Программа тренировки  или питания <strong  style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;color: #7f0082;">100</strong> грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;">Аренда шкафчика <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
+    color: #7f0082;">50</strong> грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;">Первое посещение - БЕСПЛАТНО</div>
                 </div>
             </div>
         </section>
