@@ -78,7 +78,7 @@ endif;
             <?php endif; ?>
 
         <section class="cont_block" id="block1">
-            <a href="https://avalon.stimul.fitness/" class="svg">
+            <a href="https://avalon.kharkov.ua/" class="svg">
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
             </a>
             <div id="clubs_link">

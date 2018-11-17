@@ -28,7 +28,7 @@ foreach ( $reviews as $post ) : setup_postdata( $post ); ?>
             <span><?php the_content(); ?></span>
         </div>
         <div class="rev_smalltext">
-            <span> Description small text.</span>
+            <span><?php the_content(); ?></span>
         </div>
     </div>
     <?php
