@@ -14,7 +14,7 @@ get_header();
     <?php endif; ?>
 
     <section class="cont_block" id="block1">
-        <a href="https://avalon.kharkov.ua/" class="svg">
+        <a href="<?php echo get_home_url(); ?>" class="svg">
             <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
         </a>
     </section>
@@ -81,4 +81,11 @@ get_header();
         </div>
     </div>
 </div>
+<script type="text/ecmascript" async defer>
+    var uri = "<?php echo get_home_url(); ?>";
+    jQuery(".menu li a").on("click", function(){
+        var link = jQuery(this).attr("href");
+        window.location.href = uri + link
+    })
+</script>
 <?php get_footer(); ?>

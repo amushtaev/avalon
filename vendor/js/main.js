@@ -240,6 +240,7 @@ function show_popup(p) {
 }
 
 function scroll_to( href, top ) {
+    if(window.location.pathname.length > 1) return;
     c(href)
     c(top)
     if(top === "undefined") {
