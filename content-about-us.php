@@ -12,7 +12,7 @@ global $post;
     <div id="video">
         <div>
             <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_about.svg"></object>
-            <div id="play_btn"></div>
+            <div id="play_btn-"></div>
         </div>
     </div>
     <div id="b3_text2">

@@ -265,6 +265,11 @@ function send_freetraining(b) {
     } else {
         jQuery('#free_club').addClass('error');
     }
+    if ( jQuery('#free_name input').val().length > 0 ) {
+        jQuery('#free_name').removeClass('error');
+    } else {
+        jQuery('#free_name').addClass('error');
+    }
     var tel = jQuery('#free_phone input').cleanVal();
     if ( tel.length && tel[0]=='0' ) { tel = tel.substring(1) }
     if ( /^\d{9}$/.test(tel) ) {
@@ -272,10 +277,10 @@ function send_freetraining(b) {
     } else {
         jQuery('#free_phone').addClass('error').find('input').focus();
     }
-    if ( jQuery('#free_club').hasClass('error') || jQuery('#free_phone').hasClass('error') ) { return; }
+    if ( jQuery('#free_club').hasClass('error') || jQuery('#free_name').hasClass('error') ||  jQuery('#free_phone').hasClass('error')) { return; }
     jQuery('#free_fixed').fadeTo( 300, 0, function(){ jQuery('#free_fixed').hide(); } );
     jQuery(b).addClass('wait');
-    var today = new Date();
+    /*var today = new Date();
     var dd = today.getDate();
     var mm = today.getMonth()+1; //January is 0!
     var yyyy = today.getFullYear();
@@ -292,22 +297,24 @@ function send_freetraining(b) {
     } else if (localStorage.getItem('phone')){
         alert('Не удалось отправить заявку :_(\nПопробуйте ещё раз или свяжитесь с администратором нашего клуба.');
         jQuery("#block5 .skew_button img").hide();
-    }
+    }*/
     if(!localStorage.getItem('phone')) {
         jQuery.ajax({
-            //action: "avalon_action",
             url : '/wp-content/themes/avalon/mail.php',
             type : 'POST',
             data : {
                 day : jQuery('#free_club').data('value'),
+                name : jQuery('#free_name').data('value'),
                 phone : tel
             },
             success : function (data, textStatus) {
                 if ( textStatus == 'success' ) {
-                    localStorage.setItem('phone', tel);
+                    /*localStorage.setItem('phone', tel);
                     localStorage.setItem('day', dd);
-                    localStorage.setItem('manth', mm);
-                    show_popup('free');
+                    localStorage.setItem('manth', mm);*/
+                    jQuery("#block5 .skew_button img").hide();
+                    window.location.href = "https://avalon.kharkov.ua/thanks/"
+                    //show_popup('free');
                 }
             },
             complete : function (XMLHttpRequest, textStatus) {

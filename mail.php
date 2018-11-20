@@ -1,8 +1,9 @@
 <?php
 
-if (isset($_POST['day']) && isset($_POST['phone'])) {
-    $name = $_POST['day'];
+if (isset($_POST['day']) && isset($_POST['name']) && isset($_POST['phone'])) {
+    $day = $_POST['day'];
     $phone = $_POST['phone'];
+    $name = $_POST['name'];
 }
 //yakovenko.dmitriy
 $subject = 'Пробное занятие';
@@ -14,7 +15,8 @@ $mail_headers .= 'Cc: yakovenko.dmitriy@gmail.com' . "\r\n";
 
 
 $message = "
-День: $name<br>
+День: $day<br>
+Имя: $name<br>
 Контактный телефон: $phone<br>";
 
 $success = mail($addressat, $subject, $message, $mail_headers);

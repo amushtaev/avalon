@@ -52,8 +52,18 @@ endif;
             -moz-box-shadow: 0 -5px 5px -5px #000;  box-shadow: 0 -5px 5px -5px #000;}
     </style>
     <?php wp_head(); ?>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16495942-12"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-1019819457');
+        gtag('config', 'UA-16495942-12');
+    </script>
     </head>
 <body>
+
     <div id="free_fixed" style="right: 17px; margin-top: -110px; display: block;">
         <div id="ff_top"><div class="ff_bg"></div></div>
         <div id="ff_center">
@@ -151,10 +161,12 @@ endif;
                     <span>БЕСПЛАТНО</span>
                 </h3>
                 <div id="free_form">
-                        <span class="skew_select empty" id="free_club" data-change="undefined" data-value="">
-                            <span>Авалон</span>
-                            <div>Выберите удобный день</div>
-                            <ul>
+                            <select class="skew_select" id="free_club" data-placeholder="Авалон" data-empty="Выберите удобный день">
+                                <option value="понедельник">понедельник</option>
+                                <option value="среда">среда</option>
+                                <option value="пятница">пятница</option>
+                            </select>
+                            <!--<ul>
                                 <li data-value="понедельник">
                                     <span>понедельник</span>
                                 </li>
@@ -164,9 +176,12 @@ endif;
                                 <li data-value="пятница">
                                     <span>пятница</span>
                                 </li>
-                            </ul>
+                            </ul>-->
                             <input id="day" type="hidden" value="" name="day" />
-                        </span>
+                    <br><br>
+                    <span class="skew_input" id="free_name" data-value="" style="">
+                        <input type="text" value="" placeholder="Имя" maxlength="12" name="name" style="width: 294px;">
+                    </span>
                     <br><br>
                     <span class="skew_input" id="free_phone" data-value="">
                             <span>+380</span>

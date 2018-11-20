@@ -1,6 +1,16 @@
 <?php
 get_header();
 ?>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'AW-1019819457');
+    gtag('config', 'UA-16495942-12');
+    if(window.location.href.indexOf("thanks") > -1) {
+        gtag('event', 'conversion', {'send_to': 'AW-1019819457/9MP5CPan148BEMHrpOYD'});
+    }
+</script>
 
 <div id="content">
     <div id="getwidth"></div>
