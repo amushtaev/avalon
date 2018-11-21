@@ -115,6 +115,53 @@ endif;
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/header_slider.svg"></object>
             </a>
         </section>
+        <section class="width_block" id="block5">
+            <div class="cont_block">
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/img_0259-min.svg" id="b5_img1"></object>
+                <h3>
+                    ПОПРОБУЙТЕ НАШИ ЗАЛЫ<br>
+                    <span>БЕСПЛАТНО</span>
+                </h3>
+                <div id="free_form">
+                    <select class="skew_select" id="free_club" data-placeholder="Авалон" data-empty="Выберите удобный день">
+                        <option value="понедельник">понедельник</option>
+                        <option value="среда">среда</option>
+                        <option value="пятница">пятница</option>
+                    </select>
+                    <!--<ul>
+                        <li data-value="понедельник">
+                            <span>понедельник</span>
+                        </li>
+                        <li data-value="среда">
+                            <span>среда</span>
+                        </li>
+                        <li data-value="пятница">
+                            <span>пятница</span>
+                        </li>
+                    </ul>-->
+                    <input id="day" type="hidden" value="" name="day" />
+                    <br><br>
+                    <span class="skew_input" id="free_name" data-value="" style="">
+                        <input type="text" value="" placeholder="Имя" maxlength="12" name="name" style="width: 294px;">
+                    </span>
+                    <br><br>
+                    <span class="skew_input" id="free_phone" data-value="">
+                            <span>+380</span>
+                            <input type="text" value="" placeholder="__ ___-__-__" maxlength="12" name="phone">
+                        </span>
+                    <br><br>
+                    <button class="skew_button" onclick="send_freetraining(this)">
+                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
+                        <input class="submit-button" type="submit" value="Отправить" style="width: 100%;height: inherit;opacity: 0; position: relative; top: -18px;"/>
+                        <img src="/wp-content/themes/avalon/img/loader.gif">
+                    </button>
+                </div>
+                <div id="b5_text1">
+                    <span>Оставьте свой номер телефона и наш администратор перезвонит
+                    вам в ближайшее время и запишет на удобное для вас время</span>
+                </div>
+            </div>
+        </section>
         <section class="cont_block" id="block3">
             <?php
             if ( have_posts() ) :
@@ -152,53 +199,6 @@ endif;
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon6.svg"></object>
                 </li>
             </ul>
-        </section>
-        <section class="width_block" id="block5">
-            <div class="cont_block">
-                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/img_0259-min.svg" id="b5_img1"></object>
-                <h3>
-                    ПОПРОБУЙТЕ НАШИ ЗАЛЫ<br>
-                    <span>БЕСПЛАТНО</span>
-                </h3>
-                <div id="free_form">
-                            <select class="skew_select" id="free_club" data-placeholder="Авалон" data-empty="Выберите удобный день">
-                                <option value="понедельник">понедельник</option>
-                                <option value="среда">среда</option>
-                                <option value="пятница">пятница</option>
-                            </select>
-                            <!--<ul>
-                                <li data-value="понедельник">
-                                    <span>понедельник</span>
-                                </li>
-                                <li data-value="среда">
-                                    <span>среда</span>
-                                </li>
-                                <li data-value="пятница">
-                                    <span>пятница</span>
-                                </li>
-                            </ul>-->
-                            <input id="day" type="hidden" value="" name="day" />
-                    <br><br>
-                    <span class="skew_input" id="free_name" data-value="" style="">
-                        <input type="text" value="" placeholder="Имя" maxlength="12" name="name" style="width: 294px;">
-                    </span>
-                    <br><br>
-                    <span class="skew_input" id="free_phone" data-value="">
-                            <span>+380</span>
-                            <input type="text" value="" placeholder="__ ___-__-__" maxlength="12" name="phone">
-                        </span>
-                    <br><br>
-                    <button class="skew_button" onclick="send_freetraining(this)">
-                        <span>ОСТАВИТЬ ЗАЯВКУ</span>
-                        <input class="submit-button" type="submit" value="Отправить" style="width: 100%;height: inherit;opacity: 0; position: relative; top: -18px;"/>
-                        <img src="/wp-content/themes/avalon/img/loader.gif">
-                    </button>
-                </div>
-                <div id="b5_text1">
-                    <span>Оставьте свой номер телефона и наш администратор перезвонит
-                    вам в ближайшее время и запишет на удобное для вас время</span>
-                </div>
-            </div>
         </section>
         <section class="cont_block" id="block6">
             <h2>КОМАНДА АВАЛОН</h2>
