@@ -213,7 +213,7 @@ function script_add_defer_attribute( $tag, $handle ) {
         'landing',
         'banner',
         'gallery',
-        'reviews',
+        'review-mains',
     );
     foreach( $handles as $defer_script) {
         if ( $defer_script === $handle ) {

@@ -1,13 +1,13 @@
 function rvsubmit(pg,nm,ln) {
     var b = true;
-    if ( typeof window.review_before == 'function' ) {
-        b = review_before(pg,nm) !== false;
+    if ( typeof window.review-main_before == 'function' ) {
+        b = review-main_before(pg,nm) !== false;
     }
     if ( !b ) { return; }
     if (( $('#rvname').val() == '' )||( $('#rvtext').val() == '' )) { return; }
     $.ajax({
         type : 'POST',
-        data : { module : 'reviews',
+        data : { module : 'review-mains',
                  rev : 'add',
                  inps : { name:$('#rvname').val(),
                           mail:$('#rvmail').val(),
@@ -16,18 +16,18 @@ function rvsubmit(pg,nm,ln) {
                  page : {name:pg,num:nm,lng:ln} },
         success: function (data, textStatus) {
             if ( data == 'captcha' ) {
-                if ( typeof window.review_captcha == 'function' ) {
-                    review_captcha(pg,nm);
+                if ( typeof window.review-main_captcha == 'function' ) {
+                    review-main_captcha(pg,nm);
                 }
                 return;
             }
-            if ( typeof window.review_success == 'function' ) {
-                review_success(data,pg,nm);
+            if ( typeof window.review-main_success == 'function' ) {
+                review-main_success(data,pg,nm);
             }
         },
         error: function (data, textStatus) {
-            if ( typeof window.review_error == 'function' ) {
-                review_error(pg,nm);
+            if ( typeof window.review-main_error == 'function' ) {
+                review-main_error(pg,nm);
             }
         }
     });
@@ -39,7 +39,7 @@ function rvrecaptcha(ic) {
     $.ajax({
         type : 'POST',
         async : false,
-        data : { module : 'reviews', rev : 'recap' },
+        data : { module : 'review-mains', rev : 'recap' },
         success: function (data, textStatus) {
             if ( !rvimcp ) { rvimcp = $('img[src="'+ic+'"]').attr('src',data); }
             $(rvimcp).attr('src',data);

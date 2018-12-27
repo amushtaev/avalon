@@ -12,3 +12,5 @@
 ?>
 
 
+<link rel="icon" href="<?php echo get_home_url(); ?>/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
+<link rel="shortcut icon" href="<?php echo get_home_url(); ?>/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">

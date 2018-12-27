@@ -191,11 +191,11 @@ endif;
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon5.svg"></object>
                 </li>
                 <li id="b4_li5">
-                    <span>Наличие доп услуг<br />на територии клуба</span>
+                    <span>Персональный<br />тренер</span>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon4.svg"></object>
                 </li>
                 <li id="b4_li6">
-                    <span>Индивидуальный<br />тренинг Fit&Gym</span>
+                    <span>Персональные<br />тренировки</span>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon6.svg"></object>
                 </li>
             </ul>
@@ -230,6 +230,13 @@ endif;
                     <span><img src="/wp-content/themes/avalon/img/min_7.jpg"></span>
                     <span><img src="/wp-content/themes/avalon/img/min_8.jpg"></span>
                     <span><img src="/wp-content/themes/avalon/img/min_9.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_10.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_11.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_12.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_13.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_14.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_15.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_16.jpg"></span>
                 </div>
                 <div id="b7_text1">
                     <a href="#"></a>
@@ -254,9 +261,6 @@ endif;
                     <div style="color:#7f0082;margin: 10px 0;">Доплата за тренера разовая <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
     color: #7f0082;">130</strong>грн</div>
                     <div style="color:#7f0082;margin: 10px 0;">Доплата за 10 занятий/месяц с тренером <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700; color: #7f0082;">1170</strong> грн</div>
-                    <div style="color:#7f0082;margin: 10px 0;">Программа тренировки  или питания <strong  style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;color: #7f0082;">100</strong> грн</div>
-                    <div style="color:#7f0082;margin: 10px 0;">Аренда шкафчика <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
-    color: #7f0082;">50</strong> грн</div>
                     <div style="color:#7f0082;margin: 10px 0;">Первое посещение - БЕСПЛАТНО</div>
                 </div>
             </div>

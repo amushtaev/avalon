@@ -8,12 +8,12 @@
 
 <?php
 $args = array( 'posts_per_page' => 10,
-    'category_name' => 'reviews' );
+    'category_name' => 'review-mains' );
 //thumbnail, medium, large или full
-$reviews = get_posts( $args );
+$review-mains = get_posts( $args );
 $size = 'thumbnail';
-foreach ( $reviews as $post ) : setup_postdata( $post ); ?>
-    <div class="review">
+foreach ( $review-mains as $post ) : setup_postdata( $post ); ?>
+    <div class="review-main">
         <div class="rev_img">
             <?php if (get_the_post_thumbnail_url(get_the_ID(), $size )) : ?>
                 <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), $size ); ?>">

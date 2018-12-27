@@ -7,9 +7,9 @@
 ?>
 <section about="popup">
     <div id="popups">
-        <div id="previews">
-            <div id="smallreviews">
-                <?php get_template_part( 'content', 'reviews' ); ?>
+        <div id="preview-mains">
+            <div id="smallreview-mains">
+                <?php get_template_part( 'content', 'review-mains' ); ?>
             </div>
         </div>
         <div id="pcommand">

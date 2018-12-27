@@ -37,7 +37,7 @@ jQuery(document).ready(function() {
         clearTimeout(intervalID);
     }, 10000);
 //пофиксить из-за этого виснет страница
-    var l = jQuery('#smallreviews .review').length;
+    var l = jQuery('#smallreview-mains .review-main').length;
     if(l > 0) {
         var r = 0;
         var v = 0;
@@ -46,7 +46,7 @@ jQuery(document).ready(function() {
                 var r = Math.floor(Math.random() * l);
             }
             v = r;
-            jQuery('#reviews').append(jQuery('#smallreviews .review').eq(v).clone());
+            jQuery('#review-mains').append(jQuery('#smallreview-mains .review-main').eq(v).clone());
         }
     }
 
