@@ -258,18 +258,25 @@ function scroll_to( href, top ) {
 }
 
 function send_freetraining(b) {
-    jQuery('#day').val(jQuery('#free_club').data('value'));
+    /*jQuery('#day').val(jQuery('#free_club').data('value'));*/
     if ( jQuery(b).hasClass('wait') ) { return; }
-    if ( !jQuery('#free_club').hasClass('empty') ) {
+    /*if ( !jQuery('#free_club').hasClass('empty') ) {
         jQuery('#free_club').removeClass('error');
     } else {
         jQuery('#free_club').addClass('error');
-    }
+    }*/
     if ( jQuery('#free_name input').val().length > 0 ) {
         jQuery('#free_name').removeClass('error');
     } else {
         jQuery('#free_name').addClass('error');
     }
+
+    if ( jQuery('#free_full_name input').val().length > 0 ) {
+        jQuery('#free_full_name').removeClass('error');
+    } else {
+        jQuery('#free_full_name').addClass('error');
+    }
+
     var tel = jQuery('#free_phone input').cleanVal();
     if ( tel.length && tel[0]=='0' ) { tel = tel.substring(1) }
     if ( /^\d{9}$/.test(tel) ) {
@@ -277,7 +284,8 @@ function send_freetraining(b) {
     } else {
         jQuery('#free_phone').addClass('error').find('input').focus();
     }
-    if ( jQuery('#free_club').hasClass('error') || jQuery('#free_name').hasClass('error') ||  jQuery('#free_phone').hasClass('error')) { return; }
+    
+    if ( jQuery('#free_full_name').hasClass('error') || jQuery('#free_name').hasClass('error') ||  jQuery('#free_phone').hasClass('error')) { return; }
     jQuery('#free_fixed').fadeTo( 300, 0, function(){ jQuery('#free_fixed').hide(); } );
     jQuery(b).addClass('wait');
     /*var today = new Date();
@@ -303,8 +311,9 @@ function send_freetraining(b) {
             url : '/wp-content/themes/avalon/mail.php',
             type : 'POST',
             data : {
-                day : jQuery('#free_club').data('value'),
-                name : jQuery('#free_name').data('value'),
+                //day : jQuery('#free_club').data('value'),
+                name : jQuery('#free_name input').val(),
+                full_name : jQuery('#free_full_name input').val(),
                 phone : tel
             },
             success : function (data, textStatus) {

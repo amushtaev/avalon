@@ -123,12 +123,12 @@ endif;
                     <span>БЕСПЛАТНО</span>
                 </h3>
                 <div id="free_form">
-                    <select class="skew_select" id="free_club" data-placeholder="Авалон" data-empty="Выберите удобный день">
+                    <!--<select class="skew_select" id="free_club" data-placeholder="Авалон" data-empty="Выберите удобный день">
                         <option value="понедельник">понедельник</option>
                         <option value="среда">среда</option>
                         <option value="пятница">пятница</option>
                     </select>
-                    <!--<ul>
+                    <ul>
                         <li data-value="понедельник">
                             <span>понедельник</span>
                         </li>
@@ -140,12 +140,16 @@ endif;
                         </li>
                     </ul>-->
                     <input id="day" type="hidden" value="" name="day" />
-                    <br><br>
-                    <span class="skew_input" id="free_name" data-value="" style="">
+                    <br>
+                    <span class="skew_input" id="free_name" data-value="" style="margin-top: 4px;">
                         <input type="text" value="" placeholder="Имя" maxlength="12" name="name" style="width: 294px;">
                     </span>
-                    <br><br>
-                    <span class="skew_input" id="free_phone" data-value="">
+                    <br>
+                    <span class="skew_input" id="free_full_name" data-value="" style="margin-top: 4px;">
+                        <input type="text" value="" placeholder="Фамилия" maxlength="12" name="full_name" style="width: 294px;">
+                    </span>
+                    <br>
+                    <span class="skew_input" id="free_phone" data-value="" style="margin-top: 4px;">
                             <span>+380</span>
                             <input type="text" value="" placeholder="__ ___-__-__" maxlength="12" name="phone">
                         </span>
@@ -200,7 +204,7 @@ endif;
                 </li>
             </ul>
         </section>
-        <section class="cont_block" id="block6">
+        <section class="cont_block" id="block6" style="display: none">
             <h2>КОМАНДА АВАЛОН</h2>
             <ul class="command" id="command"></ul>
             <div id="b6_text1">
@@ -209,17 +213,20 @@ endif;
                 </button>
             </div>
         </section>
-        <section class="cont_block" id="block13" style="background-color: #f1f1f1;width: 100%; margin-top: 100px">
+        <section class="cont_block" id="block13" style="background-color: #f1f1f1;width: 100%; margin-top: -50px">
             <div class="cont_block">
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/personal_training_photo_640x415.svg"></object>
                 <?php
                     get_template_part( 'content', 'personal' );
                 ?>
             </div>
+            <button class="center_button scroll" href="#block5">
+                <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            </button>
         </section>
         <section class="width_block" id="block7">
             <div class="cont_block">
-                <h2>ГАЛЛЕРЕЯ</h2>
+                <h2>ГАЛЕРЕЯ</h2>
                 <div id="photos">
                     <span><img src="/wp-content/themes/avalon/img/min_1.jpg"></span>
                     <span><img src="/wp-content/themes/avalon/img/min_2.jpg"></span>
@@ -237,11 +244,34 @@ endif;
                     <span><img src="/wp-content/themes/avalon/img/min_14.jpg"></span>
                     <span><img src="/wp-content/themes/avalon/img/min_15.jpg"></span>
                     <span><img src="/wp-content/themes/avalon/img/min_16.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_17.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_18.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_19.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_20.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_21.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_22.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_23.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_24.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_25.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_26.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_27.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_28.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_29.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_30.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_31.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_32.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_33.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_34.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_35.jpg"></span>
+                    <span><img src="/wp-content/themes/avalon/img/min_36.jpg"></span>
                 </div>
                 <div id="b7_text1">
                     <a href="#"></a>
                 </div>
             </div>
+            <button class="center_button scroll" href="#block5">
+                <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            </button>
         </section>
         <section class="cont_block" id="block8">
             <h2>НАШИ КЛИЕНТЫ О НАС</h2>
@@ -257,13 +287,17 @@ endif;
                     <button class="center_button scroll red_button" href="#block5" top="250"><span>Попробовать бесплатно</span></button>
                 </div>
                     <?php get_template_part( 'content', 'card' ); ?>
-                <div id="cards_buyed">
-                    <div style="color:#7f0082;margin: 10px 0;">Доплата за тренера разовая <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
-    color: #7f0082;">130</strong>грн</div>
-                    <div style="color:#7f0082;margin: 10px 0;">Доплата за 10 занятий/месяц с тренером <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700; color: #7f0082;">1170</strong> грн</div>
-                    <div style="color:#7f0082;margin: 10px 0;">Первое посещение - БЕСПЛАТНО</div>
+                <div id="cards_buyed" style=" /*width: 294px;*/ display: inline-block;  margin-top: 52px;    line-height: 21px;">
+                    <div style="color:#7f0082;margin: 10px 0;display: inline-block;margin-left: 40px;">Доплата за тренера разовая <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
+    color: #7f0082;">160</strong>грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;display: inline-block;margin-left: 40px;">Доплата за 8 занятий/месяц с тренером <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700; color: #7f0082;">1040</strong> грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;display: inline-block;margin-left: 40px;">Доплата за 12 занятий/месяц с тренером <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700; color: #7f0082;">1560</strong> грн</div>
+                    <div style="color:#7f0082;margin: 10px 0;display: inline-block;margin-left: 40px;">Первое посещение - БЕСПЛАТНО</div>
                 </div>
             </div>
+            <button class="center_button scroll" href="#block5">
+                <span>ОСТАВИТЬ ЗАЯВКУ</span>
+            </button>
         </section>
         <section class="cont_block" id="block12">
             <h2>Новости клуба</h2>
@@ -290,13 +324,102 @@ endif;
                     <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Авалон Стимул официальный сайт</span><br>
                 </div>
                 <div id="socials">
-                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>
-                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43"></object></a>
-                    <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43"></object></a>
+                    <!--<a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>-->
+                    <a href="https://www.facebook.com/avalon.kharkov/" target="_blank" style="height: auto;cursor: pointer;width: 45px">
+                        <a href="https://www.facebook.com/avalon.kharkov/" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43" style="cursor: pointer;"></object>
+                    </a>
+                    <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px">
+                         <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43" style="cursor: pointer;"></object>
+                    </a>
                 </div>
             </div>
         </section>
-
+        <section class="width_block" id="block_rating"  style="display:none">
+            <div class="cont_block">
+                <?php
+                if ( have_posts() ) :
+                    query_posts('cat=6&posts_per_page=10');
+                    while (have_posts()) : the_post();
+                        ?>
+                        <div itemtype="http://schema.org/Product" itemscope="">
+                            <meta  content="<?php echo get_the_title() ?>" itemprop="name">
+                            <div itemtype="http://schema.org/Review" itemscope="">
+                                <div class="ta_rating_container ta_box_right" style="width:0px;">
+                                    <div id="ta_rating">
+                                        <div>
+                                            <div>Review of:
+                                                <span class="title item fn" itemprop="name">
+                            <a id="r-title" rel="nofollow" href="https://avalon.kharkov.ua/" title="<?php echo get_the_title() ?>" target="_blank"></a>
+                        </span>
+                                            </div>
+                                            <div class="clear"></div>
+                                            <dl>
+                                                <dt>Product by: </dt>
+                                                <dd>
+                                                    <span>Клуб Авалон</span>
+                                                </dd>
+                                            </dl>
+                                            <div class="clear"></div>
+                                            <div class="clear_space"></div>
+                                            <div>Reviewed by:
+                                                <span class="reviewer author byline vcard hcard">
+                            <span class="author me fn" itemprop="author">Клуб Авалон</span>
+                        </span>
+                                            </div>
+                                            <dl>
+                                                <dt>Rating:</dt>
+                                                <dd>
+                                                    <div class="ta_rating result rating" itemtype="http://schema.org/Rating" itemscope="" itemprop="reviewRating">
+                                                        <meta content="1" itemprop="worstRating">
+                                                        <meta content="5" itemprop="ratingValue">
+                                                        <meta content="5" itemprop="bestRating">
+                                                        <div class="result" style="width:100%;" title="5">5</div>
+                                                    </div>
+                                                </dd>
+                                            </dl>
+                                            <div class="clear"></div>
+                                            <div class="ta_headline_meta">On
+                                                <span class="dtreviewed rating_date">
+                            <span class="published" title="<?php the_modified_date('F j, Y'); ?>"><?php the_modified_date('F j, Y'); ?></span>
+                        </span>
+                                            </div>
+                                            <div class="ta_headline_meta">Last modified:
+                                                <span class="dtmodified rating_date" itemprop="dateModified">
+                            <span class="updated" title="<?php the_modified_date('F j, Y'); ?>"><?php the_modified_date('F j, Y'); ?></span>
+                        </span>
+                                            </div>
+                                            <div class="clear_space"></div>
+                                            <h3>Summary:</h3>
+                                            <div class="ta_description summary" itemprop="description">
+                            <span id="r-description">
+                                <?php
+                                $content = get_the_content();
+                                echo substr($content, 0, 500);
+                                ?>
+                            </span>
+                                            </div>
+                                        </div>
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                                <div itemprop="reviewBody">
+                                    <div itemtype="http://schema.org/Thing" itemscope="" itemprop="itemReviewed">
+                                        <meta content="<?php echo get_the_title() ?>" itemprop="name">
+                                    </div>
+                                    <?php
+                                    $content = get_the_content();
+                                    echo substr($content, 0, 1000);
+                                    ?>
+                                </div>
+                            </div>
+                        </div>
+                        <?php the_content();
+                    endwhile;
+                endif;
+                wp_reset_query();
+                ?>
+            </div>
+        </section>
         <section class="width_block" id="block11" title="Открыть карту" onclick="show_popup('selectclub')" style="cursor: pointer">
             <div class="back-top">карта</div>
         </section>

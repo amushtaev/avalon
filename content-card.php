@@ -16,36 +16,44 @@
     <div class="card_cost">60</div>
 </div>
 <div class="card">
-    <div class="card_name">Абонемент<br/>Утро-День</div>
+    <div class="card_name">Абонемент</div>
     <div class="card_service">
         <span>
-            <p><strong>Посещение:</strong></p>
-            <p>пн-пт с 7:00 до 16:00</p>
-            <p>суббота с 10:00 до 16:00</p>
-            <p>воскресенье с 11:00 до 16:00</p>
+            <p><strong>+1 занятие с тренером:</strong></p>
+            <p>безлимит </p>
+            <p>1 месяц </p>
         </span>
     </div>
-    <div class="card_cost">300</div>
+    <div class="card_cost">400</div>
 </div>
 <div class="card">
-    <div class="card_name">Абонемент<br/>Полный день</div>
+    <div class="card_name">Абонемент</div>
     <div class="card_service">
         <span>
-            <p><strong>Посещение:</strong></p>
-            <p>пн-пт с 7:00 до 22:00</p>
-            <p>суббота с 10:00 до 20:00</p>
-            <p>воскресенье с 11:00 до 18:00</p>
+            <p><strong>с продлением на следующий месяц</strong></p>
+            <p>безлимит </p>
+            <p>1 месяц </p>
         </span>
     </div>
-    <div class="card_cost">350</div>
+    <div class="card_cost">360</div>
 </div>
-<div class="card">
+<!--<div class="card">
     <div class="card_name">Абонемент <br/>на 3 месяца</div>
     <div class="card_service" style="display: block; width: 100%;">
         <span>
-            <p><strong>+15 дней заморозки</strong></p>
-            <object style="max-width: 78%;" type="image/svg+xml" data="/wp-content/themes/avalon/img/1_4.svg"></object>
+            <p><strong>+1 занятие c тренером/месяц</strong></p>
+            <p><strong>+7 дней заморозки</strong></p>
         </span>
     </div>
-    <div class="card_cost">900</div>
+    <div class="card_cost">1300</div>
 </div>
+<div class="card">
+    <div class="card_name">Абонемент <br/>на 6 месяцев</div>
+    <div class="card_service" style="display: block; width: 100%;">
+        <span>
+            <p><strong>+1 занятие c тренером/месяц</strong></p>
+            <p><strong>+14 дней заморозки</strong></p>
+        </span>
+    </div>
+    <div class="card_cost">2600</div>
+</div>-->
