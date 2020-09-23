@@ -1,68 +1,74 @@
 <?php
 /**
-* Основной шаблон сайта
-*
-* @link https://codex.wordpress.org/Template_Hierarchy
-*
-* @package WordPress
-* @subpackage Avalon
-* @since 1.0
-*/
+ * The main template file
+ *
+ * This is the most generic template file in a WordPress theme
+ * and one of the two required files for a theme (the other being style.css).
+ * It is used to display a page when nothing more specific matches a query.
+ * E.g., it puts together the home page when no home.php file exists.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @package WordPress
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
+
 
 foreach (get_the_category() as $category) {
-$post_type = $category->slug;
+    $post_type = $category->slug;
 }
 if ( have_posts()) :
-$categories = get_the_category();
-$category_id = $categories[0]->cat_ID;
+    $categories = get_the_category();
+    $category_id = $categories[0]->cat_ID;
 endif;
 ?>
     <!DOCTYPE html>
 
     <head>
+    <?php get_header(); ?>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="keywords" content="фитнес, тренажёры, харьков, авалон, спорт">
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
 
         <link rel="icon" href="/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
         <link rel="shortcut icon" href="/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/reset.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/landing.css?ver=4.9.8">
-    <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/gallery.css?ver=4.9.8">
-    <style>
-        body {font-size:14px; font-family:Arial, Helvetica, sans-serif;}
-        strong {font-weight: bold;}
-        #content {position:fixed; left:0; top:0; width:100%; bottom:0; overflow:auto; background-color:#fff;}
-        .width_block {width:100%; min-width:1000px; position:relative; z-index:1;}
-        .cont_block {width:1000px; box-sizing:border-box; margin:0 auto; position:relative; z-index:1;}
-        h2 {font-size:38px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
-        h3 {font-size:24px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
-        #slider {width: 1000px;height: 400px;position: relative;}
-        #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center; height: 100%;}
-        #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
-        #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
-        #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
-        .back-top{ margin: -13px auto; cursor:pointer; width:100px; height:40px; text-align:center;
-            z-index:10000; font-size: 22px; line-height: 40px; background:#960174; -webkit-box-shadow: 0 -5px 15px -5px #000;
-            -moz-box-shadow: 0 -5px 15px -5px #000; box-shadow: 0 -5px 15px -5px #000; -webkit-transition: all 300ms linear;
-            -moz-transition: all 300ms linear; -o-transition: all 300ms linear; -ms-transition: all 300ms linear; transition: all 300ms linear;
-            font-family:Arial, Helvetica, sans-serif; color: #fff; border-radius: 5px; }
-        .back-top:hover{background:#c254bb; -webkit-box-shadow: 0 -5px 5px -5px #000;
-            -moz-box-shadow: 0 -5px 5px -5px #000;  box-shadow: 0 -5px 5px -5px #000;}
-    </style>
-    <?php wp_head(); ?>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16495942-12"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'AW-1019819457');
-        gtag('config', 'UA-16495942-12');
-    </script>
+        <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/reset.css?ver=4.9.8">
+        <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/style.css?ver=4.9.8">
+        <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/landing.css?ver=4.9.8">
+        <link defer async rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/gallery.css?ver=4.9.8">
+        <style>
+            body {font-size:14px; font-family:Arial, Helvetica, sans-serif;}
+            strong {font-weight: bold;}
+            #content {position:fixed; left:0; top:0; width:100%; bottom:0; overflow:auto; background-color:#fff;}
+            .width_block {width:100%; min-width:1000px; position:relative; z-index:1;}
+            .cont_block {width:1000px; box-sizing:border-box; margin:0 auto; position:relative; z-index:1;}
+            h2 {font-size:38px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
+            h3 {font-size:24px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
+            #slider {width: 1000px;height: 400px;position: relative;}
+            #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center; height: 100%;}
+            #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
+            #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
+            #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
+            .back-top{ margin: -13px auto; cursor:pointer; width:100px; height:40px; text-align:center;
+                z-index:10000; font-size: 22px; line-height: 40px; background:#960174; -webkit-box-shadow: 0 -5px 15px -5px #000;
+                -moz-box-shadow: 0 -5px 15px -5px #000; box-shadow: 0 -5px 15px -5px #000; -webkit-transition: all 300ms linear;
+                -moz-transition: all 300ms linear; -o-transition: all 300ms linear; -ms-transition: all 300ms linear; transition: all 300ms linear;
+                font-family:Arial, Helvetica, sans-serif; color: #fff; border-radius: 5px; }
+            .back-top:hover{background:#c254bb; -webkit-box-shadow: 0 -5px 5px -5px #000;
+                -moz-box-shadow: 0 -5px 5px -5px #000;  box-shadow: 0 -5px 5px -5px #000;}
+        </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-16495942-12"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-1019819457');
+            gtag('config', 'UA-16495942-12');
+        </script>
     </head>
-<body>
+    <body>
 
     <div id="free_fixed" style="right: 17px; margin-top: -110px; display: block;">
         <div id="ff_top"><div class="ff_bg"></div></div>
@@ -79,13 +85,13 @@ endif;
     <div id="content">
         <div id="getwidth"></div>
 
-            <?php if ( has_nav_menu( 'top' ) ) : ?>
-                <div id="premenuwidth" class="stickytop" style="right: 17px;">
-                    <div id="premenu">
-                        <?php get_template_part( 'navigation/navigation', 'top' ); ?>
-                    </div>
+        <?php if ( has_nav_menu( 'top' ) ) : ?>
+            <div id="premenuwidth" class="stickytop" style="right: 17px;">
+                <div id="premenu">
+                    <?php get_template_part( 'navigation/navigation', 'top' ); ?>
                 </div>
-            <?php endif; ?>
+            </div>
+        <?php endif; ?>
 
         <section class="cont_block" id="block1">
             <a href="<?php echo get_home_url(); ?>" class="svg">
@@ -169,6 +175,7 @@ endif;
         <section class="cont_block" id="block3">
             <?php
             if ( have_posts() ) :
+                $query_string = '';
                 query_posts_for_main($query_string, 'about-us', '1');
             endif;
             ?>
@@ -217,7 +224,7 @@ endif;
             <div class="cont_block">
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/personal_training_photo_640x415.svg"></object>
                 <?php
-                    get_template_part( 'content', 'personal' );
+                get_template_part( 'content', 'personal' );
                 ?>
             </div>
             <button class="center_button scroll" href="#block5">
@@ -286,7 +293,7 @@ endif;
                 <div id="b9_button1">
                     <button class="center_button scroll red_button" href="#block5" top="250"><span>Попробовать бесплатно</span></button>
                 </div>
-                    <?php get_template_part( 'content', 'card' ); ?>
+                <?php get_template_part( 'content', 'card' ); ?>
                 <div id="cards_buyed" style=" /*width: 294px;*/ display: inline-block;  margin-top: 52px;    line-height: 21px;">
                     <div style="color:#7f0082;margin: 10px 0;display: inline-block;margin-left: 40px;">Доплата за тренера разовая <strong style="position: relative; bottom: inherit;right: inherit;font-size: 19px;font-weight: 700;
     color: #7f0082;">160</strong>грн</div>
@@ -329,7 +336,7 @@ endif;
                         <a href="https://www.facebook.com/avalon.kharkov/" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43" style="cursor: pointer;"></object>
                     </a>
                     <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px">
-                         <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43" style="cursor: pointer;"></object>
+                        <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43" style="cursor: pointer;"></object>
                     </a>
                 </div>
             </div>
@@ -438,13 +445,13 @@ endif;
             </div>
         </div>
     </div>
-<?php
-get_template_part( 'content', 'popup' );
-?>
+    <?php
+    get_template_part( 'content', 'popup' );
+    ?>
     <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/css/mobile_main.css?ver=4.9.8">
     <link defer async rel="stylesheet" media="screen and (max-width:800px)" href="/wp-content/themes/avalon/css/mobile_landing.css?ver=4.9.8">
-</body>
-</html>
+    </body>
+    </html>
 <?php
 function query_posts_for_main($query_string, $slug, $n){
     query_posts($query_string .'category_name='. $slug .'&posts_per_page='. $n .'');

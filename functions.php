@@ -1,141 +1,146 @@
-﻿<?php
+<?php
 /**
-* Avalon functions and definitions
-*
-* @link https://developer.wordpress.org/themes/basics/theme-functions/
-*
-* @package WordPress
-* @subpackage Avalon
-* @since 1.0
-*/
+ * Avalon functions and definitions
+ *
+ * @link https://developer.wordpress.org/themes/basics/theme-functions/
+ *
+ * @package WordPress
+ * @subpackage Avalon
+ * @since Avalon 1.0
+ */
 
-function avalon_setup() {
-    load_theme_textdomain( 'avalon' );
-    // Add default posts and comments RSS feed links to head.
-    add_theme_support( 'automatic-feed-links' );
-    add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
-    add_image_size( 'avalon-featured-image', 2000, 1200, true );
-    add_image_size( 'avalon-thumbnail-avatar', 100, 100, true );
-    $GLOBALS['content_width'] = 1000;
+/**
+ * Avalon only works in WordPress 4.7 or later.
+ */
+if ( ! function_exists( 'twentynineteen_setup' ) ) :
+    function avalon_setup() {
+        load_theme_textdomain( 'avalon' );
+        // Add default posts and comments RSS feed links to head.
+        add_theme_support( 'automatic-feed-links' );
+        add_theme_support( 'title-tag' );
+        add_theme_support( 'post-thumbnails' );
+        add_image_size( 'avalon-featured-image', 2000, 1200, true );
+        add_image_size( 'avalon-thumbnail-avatar', 100, 100, true );
+        $GLOBALS['content_width'] = 1000;
 
-    // This theme uses wp_nav_menu() in three locations.
-    register_nav_menus( array(
-        'top'    => __( 'Top Menu', 'avalon' ),
-        'mobile'    => __( 'Top Mobile Menu', 'avalon' ),
-        'social' => __( 'Social Links Menu', 'avalon' ),
-    ) );
+        // This theme uses wp_nav_menu() in three locations.
+        register_nav_menus( array(
+            'top'    => __( 'Top Menu', 'avalon' ),
+            'mobile'    => __( 'Top Mobile Menu', 'avalon' ),
+            'social' => __( 'Social Links Menu', 'avalon' ),
+        ) );
 
-    add_theme_support( 'html5', array(
-        'comment-form',
-        'comment-list',
-        'gallery',
-        'caption',
-    ) );
+        add_theme_support( 'html5', array(
+            'comment-form',
+            'comment-list',
+            'gallery',
+            'caption',
+        ) );
 
-    /*
-     * Enable support for Post Formats.
-     */
-    add_theme_support( 'post-formats', array(
-        'aside',
-        'image',
-        'video',
-        'quote',
-        'link',
-        'gallery',
-        'audio',
-    ) );
+        /*
+         * Enable support for Post Formats.
+         */
+        add_theme_support( 'post-formats', array(
+            'aside',
+            'image',
+            'video',
+            'quote',
+            'link',
+            'gallery',
+            'audio',
+        ) );
 
-    // Add theme support for Custom Logo.
-    add_theme_support( 'custom-logo', array(
-        'width'       => 275,
-        'height'      => 70,
-        'flex-width'  => true,
-    ) );
+        // Add theme support for Custom Logo.
+        add_theme_support( 'custom-logo', array(
+            'width'       => 275,
+            'height'      => 70,
+            'flex-width'  => true,
+        ) );
 
-    // Add theme support for selective refresh for widgets.
-    add_theme_support( 'customize-selective-refresh-widgets' );
+        // Add theme support for selective refresh for widgets.
+        add_theme_support( 'customize-selective-refresh-widgets' );
 
-    // Define and register starter content to showcase the theme on new sites.
-    $starter_content = array(
-        'widgets' => array(
-            // Place three core-defined widgets in the sidebar area.
-            'sidebar-1' => array(
-                'text_business_info',
-                'search',
-                'text_about',
-            ),
+        // Define and register starter content to showcase the theme on new sites.
+        $starter_content = array(
+            'widgets' => array(
+                // Place three core-defined widgets in the sidebar area.
+                'sidebar-1' => array(
+                    'text_business_info',
+                    'search',
+                    'text_about',
+                ),
 
-            // Add the core-defined business info widget to the footer 1 area.
-            'sidebar-2' => array(
-                'text_business_info',
-            ),
+                // Add the core-defined business info widget to the footer 1 area.
+                'sidebar-2' => array(
+                    'text_business_info',
+                ),
 
-            // Put two core-defined widgets in the footer 2 area.
-            'sidebar-3' => array(
-                'text_about',
-                'search',
-            ),
-        ),
-
-        // Default to a static front page and assign the front and posts pages.
-        'options' => array(
-            'show_on_front' => 'page',
-            'page_on_front' => '{{home}}',
-            'page_for_posts' => '{{blog}}',
-        ),
-
-        // Set the front page section theme mods to the IDs of the core-registered pages.
-        'theme_mods' => array(
-            'panel_1' => '{{homepage-section}}',
-            'panel_2' => '{{about}}',
-            'panel_3' => '{{blog}}',
-            'panel_4' => '{{contact}}',
-        ),
-
-        // Set up nav menus for each of the two areas registered in the theme.
-        'nav_menus' => array(
-            // Assign a menu to the "top" location.
-            'top' => array(
-                'name' => __( 'Top Menu', 'avalon' ),
-                'items' => array(
-                    'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
-                    'page_about',
-                    'page_blog',
-                    'page_contact',
+                // Put two core-defined widgets in the footer 2 area.
+                'sidebar-3' => array(
+                    'text_about',
+                    'search',
                 ),
             ),
-            'mobile' => array(
-                'name' => __( 'Top Mobile Menu', 'avalon' ),
-                'items' => array(
-                    'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
-                    'page_about',
-                    'page_blog',
-                    'page_contact',
+
+            // Default to a static front page and assign the front and posts pages.
+            'options' => array(
+                'show_on_front' => 'page',
+                'page_on_front' => '{{home}}',
+                'page_for_posts' => '{{blog}}',
+            ),
+
+            // Set the front page section theme mods to the IDs of the core-registered pages.
+            'theme_mods' => array(
+                'panel_1' => '{{homepage-section}}',
+                'panel_2' => '{{about}}',
+                'panel_3' => '{{blog}}',
+                'panel_4' => '{{contact}}',
+            ),
+
+            // Set up nav menus for each of the two areas registered in the theme.
+            'nav_menus' => array(
+                // Assign a menu to the "top" location.
+                'top' => array(
+                    'name' => __( 'Top Menu', 'avalon' ),
+                    'items' => array(
+                        'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+                        'page_about',
+                        'page_blog',
+                        'page_contact',
+                    ),
+                ),
+                'mobile' => array(
+                    'name' => __( 'Top Mobile Menu', 'avalon' ),
+                    'items' => array(
+                        'link_home', // Note that the core "home" page is actually a link in case a static front page is not used.
+                        'page_about',
+                        'page_blog',
+                        'page_contact',
+                    ),
+                ),
+                // Assign a menu to the "social" location.
+                'social' => array(
+                    'name' => __( 'Social Links Menu', 'avalon' ),
+                    'items' => array(
+                        'link_yelp',
+                        'link_facebook',
+                        'link_twitter',
+                        'link_instagram',
+                        'link_vk',
+                    ),
                 ),
             ),
-            // Assign a menu to the "social" location.
-            'social' => array(
-                'name' => __( 'Social Links Menu', 'avalon' ),
-                'items' => array(
-                    'link_yelp',
-                    'link_facebook',
-                    'link_twitter',
-                    'link_instagram',
-                    'link_vk',
-                ),
-            ),
-        ),
-    );
-    $starter_content = apply_filters( 'avalon_starter_content', $starter_content );
-    add_theme_support( 'starter-content', $starter_content );
-}
+        );
+        $starter_content = apply_filters( 'avalon_starter_content', $starter_content );
+        add_theme_support( 'starter-content', $starter_content );
+    }
+endif;
 add_action( 'after_setup_theme', 'avalon_setup' );
 
 register_nav_menus(array(
-'top'    => __( 'Top Menu', 'avalon' ),
-'mobile'    => __( 'Top Mobile Menu', 'avalon' ),
-'social' => __( 'Social Links Menu', 'avalon' ),
+    'top'    => __( 'Top Menu', 'avalon' ),
+    'mobile'    => __( 'Top Mobile Menu', 'avalon' ),
+    'social' => __( 'Social Links Menu', 'avalon' ),
 ));
 
 function avalon_widgets_init() {
