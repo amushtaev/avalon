@@ -303,15 +303,12 @@ endif;
                                 <img src="/wp-content/themes/avalon/img/placeholder.jpg">
                             <?php endif; ?>
                         </div>
-                        <div class="rev_smalltext">
-                            <span><</span>
-                        </div>
                         <div class="rev_text">
                             <span><?php the_content(); ?></span>
                             <b><?php echo get_the_title() ?></b>
                         </div>
                         <div class="rev_smalltext">
-                            <span></span>
+                            <span><?php the_content(); ?></span>
                         </div>
                     </div>
                 <?php
@@ -365,7 +362,7 @@ endif;
                 <div id="contacts">
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalonsport@gmail.com</span><br>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
-                    <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Авалон Стимул официальный сайт</span><br>
+                    <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Stimul Gym официальный сайт</span><br>
                 </div>
                 <div id="socials">
                     <!--<a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>-->
