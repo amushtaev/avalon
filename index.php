@@ -94,8 +94,10 @@ endif;
         <?php endif; ?>
 
         <section class="cont_block" id="block1">
-            <a href="<?php echo get_home_url(); ?>" class="svg">
-                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
+            <a id="logo" href="<?php echo get_home_url(); ?>" class="svg">
+                <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                     viewBox="0 0 124.9 69.3" style="height: 100%;" xml:space="preserve">
+                <image style="overflow:visible;enable-background:new    ;" width="632" height="372" xlink:href="/wp-content/themes/avalon/img/Logo.png"  transform="matrix(0.1853 0 0 0.1853 3.4413 0.4671)" />
             </a>
             <div id="clubs_link">
                 <a href="#"><span></span></a>
@@ -167,7 +169,7 @@ endif;
                     </button>
                 </div>
                 <div id="b5_text1">
-                    <span>Оставьте свой номер телефона и наш администратор перезвонит
+                    <span>Оставьте свой номер телефона и наш менеджер перезвонит
                     вам в ближайшее время и запишет на удобное для вас время</span>
                 </div>
             </div>
@@ -198,7 +200,7 @@ endif;
             </ul>
             <ul id="b4_ul2">
                 <li id="b4_li4">
-                    <span>Лояльность к клиенту<br />и клубная жизнь (мероприятия)</span>
+                    <span>Лояльность к клиенту</span>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon5.svg"></object>
                 </li>
                 <li id="b4_li5">
@@ -206,13 +208,13 @@ endif;
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon4.svg"></object>
                 </li>
                 <li id="b4_li6">
-                    <span>Персональные<br />тренировки</span>
+                    <span>Программы на похудение/<br />набор мышечной массы</span>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/icon6.svg"></object>
                 </li>
             </ul>
         </section>
         <section class="cont_block" id="block6" style="display: none">
-            <h2>КОМАНДА АВАЛОН</h2>
+            <h2>КОМАНДА Stimul Gym</h2>
             <ul class="command" id="command"></ul>
             <div id="b6_text1">
                 <button class="center_button" onclick="show_popup('command')">
@@ -280,10 +282,45 @@ endif;
                 <span>ОСТАВИТЬ ЗАЯВКУ</span>
             </button>
         </section>
-        <section class="cont_block" id="block8">
+        <section class="cont_block" id="block8" style="width: 100%;">
             <h2>НАШИ КЛИЕНТЫ О НАС</h2>
-            <div id="reviews"></div>
-            <div id="b8_text1">
+            <div id="reviews" style="max-width: 1290px; margin: auto">
+                <?php
+                $args = array( 'posts_per_page' => 10,
+                    'category_name' => 'review-mains' );
+                //thumbnail, medium, large или full
+                $review_mains = get_posts( $args );
+                $size = 'thumbnail';
+                $i = 0;
+                foreach ( $review_mains as $post ) : setup_postdata( $post );
+                    if($i < 3) :
+                    ?>
+                    <div class="review">
+                        <div class="rev_img">
+                            <?php if (get_the_post_thumbnail_url(get_the_ID(), $size )) : ?>
+                                <img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), $size ); ?>">
+                            <?php else : ?>
+                                <img src="/wp-content/themes/avalon/img/placeholder.jpg">
+                            <?php endif; ?>
+                        </div>
+                        <div class="rev_smalltext">
+                            <span><</span>
+                        </div>
+                        <div class="rev_text">
+                            <span><?php the_content(); ?></span>
+                            <b><?php echo get_the_title() ?></b>
+                        </div>
+                        <div class="rev_smalltext">
+                            <span></span>
+                        </div>
+                    </div>
+                <?php
+                    $i++;
+                    endif;
+                endforeach;
+                wp_reset_postdata(); ?>
+            </div>
+            <div id="b8_text1" style="display: none">
                 <button class="center_button" onclick="show_popup('reviews')"><span>Ещё отзывы &gt;</span></button>
             </div>
         </section>
@@ -363,14 +400,14 @@ endif;
                                             <dl>
                                                 <dt>Product by: </dt>
                                                 <dd>
-                                                    <span>Клуб Авалон</span>
+                                                    <span>Клуб Stimul Gym</span>
                                                 </dd>
                                             </dl>
                                             <div class="clear"></div>
                                             <div class="clear_space"></div>
                                             <div>Reviewed by:
                                                 <span class="reviewer author byline vcard hcard">
-                            <span class="author me fn" itemprop="author">Клуб Авалон</span>
+                            <span class="author me fn" itemprop="author">Клуб Stimul Gym</span>
                         </span>
                                             </div>
                                             <dl>
@@ -436,11 +473,10 @@ endif;
             <?php get_template_part( 'navigation/navigation', 'mobile' ); ?>
         <?php endif; ?>
         <a href="https://avalon.stimul.fitness/" class="svg">
-            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="mobile_logo"></object>
+            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/Logo.svg" id="mobile_logo"></object>
         </a>
         <div id="clubs_btn">
             <span>Меню</span>
-            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/clubs_btn.svg" width="17" height="20"></object>
             <div>
             </div>
         </div>
@@ -460,3 +496,11 @@ function query_posts_for_main($query_string, $slug, $n){
     endwhile;
 }
 ?>
+
+<script type="text/javascript">
+    jQuery(".center_button.scroll").click(function() {
+        jQuery([document.documentElement, document.body]).animate({
+            scrollTop: jQuery("#block5").offset().top
+        }, 1000);
+    });
+</script>

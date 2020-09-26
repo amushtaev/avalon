@@ -12,7 +12,10 @@ $args = array( 'posts_per_page' => 10,
 //thumbnail, medium, large или full
 $review_mains = get_posts( $args );
 $size = 'thumbnail';
-foreach ( $review_mains as $post ) : setup_postdata( $post ); ?>
+$i = 0;
+foreach ( $review_mains as $post ) : setup_postdata( $post );
+
+?>
     <div class="review-main">
         <div class="rev_img">
             <?php if (get_the_post_thumbnail_url(get_the_ID(), $size )) : ?>

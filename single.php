@@ -28,6 +28,13 @@
             font-family:Arial, Helvetica, sans-serif; color: #fff; border-radius: 5px; }
         .back-top:hover{background:#c254bb; -webkit-box-shadow: 0 -5px 5px -5px #000;
             -moz-box-shadow: 0 -5px 5px -5px #000;  box-shadow: 0 -5px 5px -5px #000;}
+        h2 {
+            font-size: 38px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            width: 100%;
+            padding: 20px 0;
+        }
     </style>
     <title>Спортивный клуб Авалон</title>
 
@@ -77,7 +84,9 @@
 
     <section class="cont_block" id="block1" style="height: 90px;z-index: 2;margin-top: 60px;">
         <a href="<?php echo get_home_url(); ?>" class="svg">
-            <object type="image/svg+xml" data="/wp-content/themes/avalon/img/avalon_logo.svg" id="logo"></object>
+            <svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                 viewBox="0 0 124.9 69.3" style="height: 80%; margin: 10px 0;" xml:space="preserve">
+                <image style="overflow:visible;enable-background:new    ;" width="632" height="372" xlink:href="/wp-content/themes/avalon/img/Logo.png"  transform="matrix(0.1853 0 0 0.1853 3.4413 0.4671)" />
         </a>
     </section>
     <section class="width_block" id="block2">
@@ -119,7 +128,7 @@
             <div id="contacts">
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalonsport@gmail.com</span><br>
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
-                <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Авалон Стимул официальный сайт</span><br>
+                <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Stimul Gym официальный сайт</span><br>
             </div>
             <div id="socials">
                 <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>
