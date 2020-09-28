@@ -21,7 +21,7 @@
             <iframe src="" scrolling="no" frameborder="0" style="border:none; width:100%; height:90%;" allowTransparency="true"></iframe>
         </div>
         <div id="pfree">
-            <p>Благодарим!<br><br>Ваша заявка успешно отправлена на рассмотрение. Вскоре наш администратор перестанет прыгать от радости и наберёт вас.</p>
+            <p>Благодарим!<br><br>Ваша заявка успешно отправлена на рассмотрение. Вскоре наш менеджер перестанет прыгать от радости и наберёт вас.</p>
             <div>
                 <button class="center_button" onclick="jQuery('#popups_close').click()">ОК</button>
             </div>

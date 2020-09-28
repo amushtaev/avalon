@@ -40,7 +40,7 @@ foreach ( $news as $post ) : setup_postdata( $post ); ?>
                         <div class="clear_space"></div>
                         <div>Reviewed by:
                             <span class="reviewer author byline vcard hcard">
-							<span class="author me fn" itemprop="author">Клуб Авалон</span>
+							<span class="author me fn" itemprop="author">Клуб Stimul Gym</span>
 						</span>
                         </div>
                         <dl>

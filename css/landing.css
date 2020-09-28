@@ -406,9 +406,9 @@ p {
 
 #b5_img1 {
 	display: block;
-	left: 0px;
+	left: -23px;
 	bottom: -380px;
-	height: 549px
+	height: 768px
 }
 
 #block5 h3 {
@@ -1243,7 +1243,7 @@ p {
 }
 
 #pselectclub:before {
-	content: 'Тренажерный зал Авалон'
+	content: 'Тренажерный зал Stimul Gym'
 }
 
 #pselectclub a {

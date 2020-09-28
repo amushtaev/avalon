@@ -16,12 +16,11 @@
     <div class="card_cost">100</div>
 </div>
 <div class="card">
-    <div class="card_name">Абонемент</div>
+    <div class="card_name">Карта StimulGym</div>
     <div class="card_service">
         <span>
-            <p><strong>+1 занятие с тренером:</strong></p>
-            <p>безлимит </p>
-            <p>1 месяц </p>
+            <p><strong>Безлимит 1 месяц</strong></p>
+            <p>Для студентов и школьников-10%</p>
         </span>
     </div>
     <div class="card_cost">500</div>

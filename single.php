@@ -2,6 +2,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="keywords" content="фитнес, тренажёры, харьков, авалон, спорт">
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <meta name="description" content="Stimul Gym — это процветающий, активно развивающийся клуб, ставящий перед собой цель: максимально качественное предоставление услуг в сфере здорового образа жизни.">
 
 
     <link defer="" async="" rel="StyleSheet" type="text/css" href="/wp-content/themes/avalon/css/reset.css?ver=4.9.8">
@@ -36,14 +37,14 @@
             padding: 20px 0;
         }
     </style>
-    <title>Спортивный клуб Авалон</title>
+    <title>Спортивный клуб Stimul Gym</title>
 
 <!-- This site is optimized with the Yoast SEO plugin v9.2.1 - https://yoast.com/wordpress/plugins/seo/ -->
 <link rel="canonical" href="https://avalon.kharkov.ua/thanks/">
 <meta property="og:locale" content="ru_RU">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://avalon.kharkov.ua/thanks/">
-<meta property="og:site_name" content="Спортивный клуб Авалон">
+<meta property="og:site_name" content="Спортивный клуб Stimul Gym">
 <meta property="og:image" content="https://avalon.kharkov.ua/wp-content/uploads/2018/11/img_0570.jpg">
 <meta property="og:image:secure_url" content="https://avalon.kharkov.ua/wp-content/uploads/2018/11/img_0570.jpg">
 <meta property="og:image:width" content="1500">
@@ -126,14 +127,14 @@
                 </div>
             </div>
             <div id="contacts">
-                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalonsport@gmail.com</span><br>
+                <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>stimulgym.2@gmail.com</span><br>
                 <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
-                <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Stimul Gym официальный сайт</span><br>
+                <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Stimul Gym<a href="https://stimul.fitness/"> Стимул официальный сайт</a></span><br>
             </div>
             <div id="socials">
                 <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>
                 <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43"></object></a>
-                <a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43"></object></a>
+                <a href="https://www.instagram.com/stimul.fitness_2/" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43"></object></a>
             </div>
         </div>
     </section>

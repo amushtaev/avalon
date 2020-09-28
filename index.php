@@ -30,6 +30,7 @@ endif;
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <meta name="keywords" content="фитнес, тренажёры, харьков, авалон, спорт">
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+        <meta name="description" content="Stimul Gym — это процветающий, активно развивающийся клуб, ставящий перед собой цель: максимально качественное предоставление услуг в сфере здорового образа жизни.">
 
         <link rel="icon" href="/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
         <link rel="shortcut icon" href="/wp-content/themes/avalon/img/favicon.gif" type="image/x-icon">
@@ -45,11 +46,11 @@ endif;
             .cont_block {width:1000px; box-sizing:border-box; margin:0 auto; position:relative; z-index:1;}
             h2 {font-size:38px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
             h3 {font-size:24px; font-family:Arial, Helvetica, sans-serif; text-align:center; width:100%;}
-            #slider {width: 1000px;height: 400px;position: relative;}
-            #slider_ani {position: relative;width: 1000px;margin: 0;text-align: center; height: 100%;}
+            #slider {width: 100%;height: 400px;position: relative;}
+            #slider_ani {position: relative;margin: 0;text-align: center; height: 100%;}
             #slider_ani span {display: inline-block;height: 400px; width: 0;vertical-align: middle;padding: 0;margin: 0;}
             #slider_ani a {display: inline-block; vertical-align: middle; padding: 0;margin: 0;height: 100%;}
-            #slider_ani object { max-width: 1000px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
+            #slider_ani object { max-width: 1360px; max-height: 400px; border: none;padding: 0;margin: 0; height: 100%;}
             .back-top{ margin: -13px auto; cursor:pointer; width:100px; height:40px; text-align:center;
                 z-index:10000; font-size: 22px; line-height: 40px; background:#960174; -webkit-box-shadow: 0 -5px 15px -5px #000;
                 -moz-box-shadow: 0 -5px 15px -5px #000; box-shadow: 0 -5px 15px -5px #000; -webkit-transition: all 300ms linear;
@@ -104,7 +105,7 @@ endif;
             </div>
         </section>
         <section class="width_block" id="block2">
-            <div class="cont_block">
+            <div class="cont_block" style="width: 100%;">
                 <div id="slider">
                     <a rel="nofollow" data-target="_blank" href="javascript:show_popup('selectclub')">
                         <div id="slider_ani">
@@ -131,7 +132,7 @@ endif;
                     <span>БЕСПЛАТНО</span>
                 </h3>
                 <div id="free_form">
-                    <!--<select class="skew_select" id="free_club" data-placeholder="Авалон" data-empty="Выберите удобный день">
+                    <!--<select class="skew_select" id="free_club" data-placeholder="Stimul Gym" data-empty="Выберите удобный день">
                         <option value="понедельник">понедельник</option>
                         <option value="среда">среда</option>
                         <option value="пятница">пятница</option>
@@ -360,17 +361,17 @@ endif;
                     </div>
                 </div>
                 <div id="contacts">
-                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>avalonsport@gmail.com</span><br>
+                    <object type="image/svg+xml" data="/wp-content/themes/avalon/img/mail.svg" width="18" height="18"></object><span>stimulgym.2@gmail.com</span><br>
                     <object type="image/svg+xml" data="/wp-content/themes/avalon/img/post.svg" width="18" height="18"></object><span>Харьков, 61001, ул. Плехановская, 73<br />м. Спортивная / м. Метростроителей им. Ващенка</span><br>
-                    <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Stimul Gym официальный сайт</span><br>
+                    <span style="padding-top: 10px;color: #989898b3">Тренажерный зал Stimul Gym<a href="https://stimul.fitness/"> Стимул официальный сайт</a></span><br>
                 </div>
                 <div id="socials">
                     <!--<a href="#" target="_blank"><object type="image/svg+xml" data="/wp-content/themes/avalon/img/vk.svg" width="40" height="40"></object></a>-->
                     <a href="https://www.facebook.com/avalon.kharkov/" target="_blank" style="height: auto;cursor: pointer;width: 45px">
                         <a href="https://www.facebook.com/avalon.kharkov/" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/fb.svg" width="40" height="43" style="cursor: pointer;"></object>
                     </a>
-                    <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px">
-                        <a href="http://Instagram.com/avalongym73" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43" style="cursor: pointer;"></object>
+                    <a href="https://www.instagram.com/stimul.fitness_2/" target="_blank" style="height: auto;cursor: pointer;width: 45px">
+                        <a href="https://www.instagram.com/stimul.fitness_2/" target="_blank" style="height: auto;cursor: pointer;width: 45px; display: block;"><div style="position: absolute;width: 45px; height: 45px"></div></a><object type="image/svg+xml" data="/wp-content/themes/avalon/img/instagram.svg" width="40" height="43" style="cursor: pointer;"></object>
                     </a>
                 </div>
             </div>
